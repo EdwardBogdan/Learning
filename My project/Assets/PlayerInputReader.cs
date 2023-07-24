@@ -6,17 +6,18 @@ namespace Project.Player
     public class PlayerInputReader : MonoBehaviour
     {
         [SerializeField] PlayerControler player;
+        [SerializeField] Vector3 _groundCheckPosition;
+        [SerializeField] float _groundCheckRadius;
+        [SerializeField] LayerMask _groundCheckLayer;
 
-        float vert = 0, horiz = 0;
-        public void OnMovementVertical(InputAction.CallbackContext context)
+        void FixedUpdate()
         {
-            vert = context.ReadValue<float>();
-            player.SetDirection(horiz, vert);
+            player.isGrounded = isGrounded();
         }
-        public void OnMovementHorizontal(InputAction.CallbackContext context)
+        public void OnMovement(InputAction.CallbackContext context)
         {
-            horiz = context.ReadValue<float>();
-            player.SetDirection(horiz, vert); 
+            Vector2 vector = context.ReadValue<Vector2>();
+            player.SetDirection(vector);
         }
         public void OnSayHello(InputAction.CallbackContext context)
         {
@@ -24,6 +25,16 @@ namespace Project.Player
             {
                 Debug.Log("Hello World");
             }
+        }
+        bool isGrounded()
+        {
+            var hit = Physics2D.CircleCast(transform.position + _groundCheckPosition, _groundCheckRadius, Vector3.down, 0, _groundCheckLayer);
+            return hit.collider != null;
+        }
+        void OnDrawGizmos()
+        {
+            Gizmos.color = isGrounded() ? Color.green : Color.red;
+            Gizmos.DrawSphere(transform.position + _groundCheckPosition, _groundCheckRadius);
         }
     }
 

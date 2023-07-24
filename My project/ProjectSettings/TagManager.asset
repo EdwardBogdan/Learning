@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - Ground
+  - Barrels
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Spikes
+    uniqueID: 2085804459
+    locked: 0
+  - name: Ground
+    uniqueID: 4230784657
     locked: 0
