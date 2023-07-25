@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Barrel
   layers:
   - Default
   - TransparentFX
@@ -11,14 +12,14 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
+  - 
   - Ground
   - Barrels
   - 
+  - Player
   - 
   - 
-  - 
-  - 
+  - Grass
   - 
   - 
   - 
@@ -46,4 +47,7 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 4230784657
+    locked: 0
+  - name: Grass
+    uniqueID: 1858027709
     locked: 0
