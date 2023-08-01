@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
+using MyProject.Components;
 using UnityEngine;
 
 namespace MyProject.Player
@@ -9,6 +7,10 @@ namespace MyProject.Player
     {
         [SerializeField] float _speed;
         [SerializeField] float _jumpSpeed;
+        [SerializeField] float _jumpSpeedDamage;
+        [SerializeField] float _interactRadius;
+        
+        [SerializeField] LayerMask _interactionLayer;
 
         Rigidbody2D _rigidbody;
         Animator _animator;
@@ -16,9 +18,13 @@ namespace MyProject.Player
 
         Vector2 _direction;
 
-        public bool isGrounded;
-        public bool isHitWallLeft;
-        public bool isHitWallRight;
+        int _countDoubleJump = 2;
+
+        bool _isGrounded;
+        bool _isHitWallLeft;
+        bool _isHitWallRight;
+
+        Collider2D[] _interactionResult = new Collider2D[1];
 
         static readonly int keyIsGrounded = Animator.StringToHash("IsGrounded");
         static readonly int keyIsRunning = Animator.StringToHash("IsRunning");
@@ -28,64 +34,106 @@ namespace MyProject.Player
         static readonly int keyDeadHit = Animator.StringToHash("Dead Hit");
         static readonly int keyVerticalVelocity = Animator.StringToHash("Vertical-Velocity");
 
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawSphere(transform.position, _interactRadius);
+        }
         public void SetDirection(Vector2 vector)
         {
-            _direction = vector;
+            float _directionX = vector.x;
+            if (_directionX > 0)
+            {
+                _spriteRenderer.flipX = false;
+            }
+            else if (_directionX < 0)
+            {
+                _spriteRenderer.flipX = true;
+            }
+            _animator.SetBool(keyIsRunning, _directionX != 0);
+            _direction = new(_directionX, vector.y);
         }
         public Vector2 GetDirection()
         {
             return _direction;
         }
-        void Move()
+        public void SetFlags(bool isGrounded, bool isHeitWallLeft, bool isHitWallRight)
+        {
+            _isGrounded = isGrounded;
+            _isHitWallLeft = isHeitWallLeft;
+            _isHitWallRight = isHitWallRight;
+
+            _animator.SetBool(keyIsGrounded, _isGrounded);
+        }
+        public void TakeDamage()
+        {
+            _animator.SetTrigger(keyHit);
+            _rigidbody.velocity = new(_rigidbody.velocity.x, _jumpSpeedDamage);
+            Debug.Log($"HP: {GetComponent<HealthComponent>().Health}");
+        }
+        public void Death()
+        {
+            Debug.Log("Умер, воскрес, но тебя, забыли");
+        }
+        public void Interact()
+        {
+            var size = Physics2D.OverlapCircleNonAlloc(transform.position, _interactRadius, _interactionResult, _interactionLayer);
+            for (int x = 0; x < size; x++)
+            {
+                _interactionResult[x].GetComponent<InteractableComponent>()?.Interact();
+            }
+        }
+        float CalculateVelocityX()
         {
             float directionX = _direction.x;
-            if (!isGrounded && ((directionX < 0 && isHitWallLeft) || (directionX > 0 && isHitWallRight)))
+            if (!_isGrounded && ((directionX < 0 && _isHitWallLeft) || (directionX > 0 && _isHitWallRight)))
             {
                 directionX = 0;
             }
-
-            _rigidbody.velocity = new(directionX * _speed, _rigidbody.velocity.y);
-
-            SetFlip(directionX);
-
-            _animator.SetBool(keyIsGrounded, isGrounded);
-            _animator.SetBool(keyIsRunning, directionX != 0);
+            return directionX;
         }
-        void Jump()
+        float CalculateVelocityY()
         {
-            bool isJumping = _direction.y > 0;
-            if (isJumping)
+            float velocityY = _rigidbody.velocity.y;
+            bool isJumpPressing = _direction.y > 0;
+
+            if (_isGrounded) _countDoubleJump = 2;
+            
+            if (isJumpPressing)
             {
-                if (isGrounded && _rigidbody.velocity.y <= 0)
-                {
-                    _rigidbody.velocity = new(_rigidbody.velocity.x, 0);
-                    _rigidbody.AddForce(Vector2.up * _jumpSpeed, ForceMode2D.Impulse);
-                }
+                velocityY = CalculateJump(velocityY);
             }
-            else if (_rigidbody.velocity.y > 0)
+            else if (velocityY > 0)
             {
-                _rigidbody.velocity = new(_rigidbody.velocity.x, _rigidbody.velocity.y * 0.5f);
+                velocityY *= 0.5f;
             }
             _animator.SetFloat(keyVerticalVelocity, _rigidbody.velocity.y);
-            _animator.SetBool(keyIsJumping, isJumping && _rigidbody.velocity.y > 0);
-        }
-        void SetFlip(float direction)
-        {
-            if (direction > 0)
+            _animator.SetBool(keyIsJumping, isJumpPressing && velocityY > 0);
+
+            return velocityY;
+
+            float CalculateJump(float velocity)
             {
-                _spriteRenderer.flipX = false;
-            }
-            else if (direction < 0)
-            {
-                _spriteRenderer.flipX = true;
+                if (velocity > 0) return velocity;
+
+                if (_isGrounded && velocity <= 0)
+                {
+                    velocity = _jumpSpeed;
+                }
+                else if (_countDoubleJump > 0)
+                {
+                    velocity = _jumpSpeed;
+                    _countDoubleJump--;
+                }
+                return velocity;
             }
         }
-        private void FixedUpdate()
+        void FixedUpdate()
         {
-            Move();
-            Jump();
+            float directionX = CalculateVelocityX();
+            float directionY = CalculateVelocityY();
+            _rigidbody.velocity = new(directionX * _speed, directionY);
         }
-        private void Awake()
+        void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();

@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene Platforms.unity
     guid: 794d0fa5c17bc6048b5e73ee09cb1137
+  - enabled: 1
+    path: Assets/Scenes/Scene Spikes.unity
+    guid: 06ca8c48040d9494fa4667f71f1b455c
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 80ad01703c290d5408e0568c810929c5, type: 2}

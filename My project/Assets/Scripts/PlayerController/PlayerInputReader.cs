@@ -15,6 +15,7 @@ namespace MyProject.Player
 
         [Space(10)]
         [Header("Wallhit Checker")]
+        [SerializeField] string[] _checkTags;
         [SerializeField] Vector3 _leftWallCheckerStart;
         [SerializeField] Vector3 _leftWallCheckerFinish;
         [Space(10)]
@@ -26,9 +27,7 @@ namespace MyProject.Player
         void FixedUpdate()
         {
             _currentPosition = transform.position;
-            player.isGrounded = isGrounded();
-            player.isHitWallLeft = isWallHitLeft();
-            player.isHitWallRight = isWallHitRight();
+            player.SetFlags(IsGrounded(), IsWallHitLeft(), IsWallHitRight());
         }
         public void OnMovement(InputAction.CallbackContext context)
         {
@@ -42,48 +41,69 @@ namespace MyProject.Player
                 Debug.Log("Hello World");
             }
         }
-        bool isGrounded()
+        public void OnInteract(InputAction.CallbackContext context)
+        {
+            if (context.canceled)
+            {
+                player.Interact();
+            }
+        }
+        bool IsGrounded()
         {
             var hit = Physics2D.CircleCast(_currentPosition + _groundCheckPosition, _groundCheckRadius, Vector3.down, 0, _groundCheckLayer);
             return hit.collider != null;
         }
-        bool isWallHitLeft()
-        { 
-            RaycastHit2D hit = Physics2D.Linecast(_currentPosition + _leftWallCheckerStart, _currentPosition + _leftWallCheckerFinish);
+        bool IsWallHitLeft()
+        {
+            // Создаем слой маску, исключая коллайдеры с слоем "CameraBorder"
+            int cameraBorderLayer = LayerMask.NameToLayer("CameraBorder");
+            LayerMask layerMask = ~(1 << cameraBorderLayer);
+
+            RaycastHit2D hit = Physics2D.Linecast(_currentPosition + _leftWallCheckerStart, _currentPosition + _leftWallCheckerFinish, layerMask);
 
             if (hit.collider != null)
             {
                 GameObject obj = hit.collider.gameObject;
-                if (!obj.CompareTag("Player") && !obj.CompareTag("Platform"))
+                foreach (string tag in _checkTags)
                 {
-                    return true;
+                    if (obj.CompareTag(tag))
+                    {
+                        return true;
+                    }
                 }
             }
             return false;
         }
-        bool isWallHitRight()
+        bool IsWallHitRight()
         {
-            var hit = Physics2D.Linecast(_currentPosition + _rightWallCheckerStart, _currentPosition + _rightWallCheckerFinish);
+            // Создаем слой маску, исключая коллайдеры с слоем "CameraBorder"
+            int cameraBorderLayer = LayerMask.NameToLayer("CameraBorder");
+            LayerMask layerMask = ~(1 << cameraBorderLayer);
+
+            var hit = Physics2D.Linecast(_currentPosition + _rightWallCheckerStart, _currentPosition + _rightWallCheckerFinish, layerMask);
 
             if (hit.collider != null)
             {
                 GameObject obj = hit.collider.gameObject;
-                if (!obj.CompareTag("Player") && !obj.CompareTag("Platform"))
+                foreach (string tag in _checkTags)
                 {
-                    return true;
+                    if (obj.CompareTag(tag))
+                    {
+                        return true;
+                    }
                 }
             }
             return false;
         }
         void OnDrawGizmos()
         {
-            Gizmos.color = isGrounded() ? Color.green : Color.red;
+            Gizmos.color = IsGrounded() ? Color.green : Color.red;
             Gizmos.DrawSphere(_currentPosition + _groundCheckPosition, _groundCheckRadius);
 
-            Gizmos.color = isWallHitLeft() ? Color.red : Color.green;
+            Gizmos.color = IsWallHitLeft() ? Color.red : Color.green;
             Gizmos.DrawLine(_currentPosition + _leftWallCheckerStart, _currentPosition + _leftWallCheckerFinish);
 
-            Gizmos.color = isWallHitRight() ? Color.red : Color.green;
+            Gizmos.color = IsWallHitRight() ? Color.red : Color.green;
             Gizmos.DrawLine(_currentPosition + _rightWallCheckerStart, _currentPosition + _rightWallCheckerFinish);
         }
     }

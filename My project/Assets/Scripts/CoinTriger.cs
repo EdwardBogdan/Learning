@@ -13,8 +13,6 @@ namespace MyProject.Components
         {
             _count += _value;
             Debug.Log($"Монет собрано: {_count}");
-            Destroy(gameObject);
         }
     }
-
 }

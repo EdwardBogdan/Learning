@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 7824644371059375233}
   - component: {fileID: 7824644371059375232}
   - component: {fileID: 6493634092784649883}
+  - component: {fileID: 2365328763100865493}
+  - component: {fileID: 4143045166530700881}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -78,7 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -307065653
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: de7a54b1419ac4c4c9dd56dc44a7916f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -206,6 +208,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: af912276-19ff-460c-9c55-6e576629c7d0
     m_ActionName: Player/SayHello[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7824644371059375232}
+        m_TargetAssemblyTypeName: MyProject.Player.PlayerInputReader, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 56f60270-4073-42f5-bee9-1aaf4fbab1e3
+    m_ActionName: Player/Interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -224,10 +242,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
-  _jumpSpeed: 35
-  isGrounded: 0
-  isHitWallLeft: 0
-  isHitWallRight: 0
+  _jumpSpeed: 10
+  _jumpSpeedDamage: 35
+  _interactRadius: 0.3
+  _interactionLayer:
+    serializedVersion: 2
+    m_Bits: 262144
 --- !u!114 &7824644371059375232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,6 +266,9 @@ MonoBehaviour:
   _groundCheckLayer:
     serializedVersion: 2
     m_Bits: 384
+  _checkTags:
+  - Ground
+  - Barrel
   _leftWallCheckerStart: {x: -0.255, y: -0.36, z: 0}
   _leftWallCheckerFinish: {x: -0.255, y: 0.51, z: 0}
   _rightWallCheckerStart: {x: 0.265, y: -0.36, z: 0}
@@ -263,3 +286,77 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ignoreTime: 0.25
+--- !u!114 &2365328763100865493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7824644371059375236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f34e8b931ea804ea67fc8a2e29bdd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 25
+  _immunityTime: 0.2
+  _onHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7824644371059375233}
+        m_TargetAssemblyTypeName: MyProject.Player.PlayerControler, Assembly-CSharp
+        m_MethodName: TakeDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onDead:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7824644371059375233}
+        m_TargetAssemblyTypeName: MyProject.Player.PlayerControler, Assembly-CSharp
+        m_MethodName: Death
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4143045166530700881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7824644371059375236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b82b66a58691e459578e1d5ec87536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputLiveTime: 2.5
+  _cheats:
+  - _name: Heal
+    _action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2365328763100865493}
+          m_TargetAssemblyTypeName: MyProject.Components.HealthComponent, Assembly-CSharp
+          m_MethodName: ApplyHeal
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 5
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
