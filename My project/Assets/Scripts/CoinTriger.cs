@@ -8,7 +8,7 @@ namespace MyProject.Components
     {
         [SerializeField] int _value;
 
-        static int _count = 0;
+        public static int _count = 0;
         public void TakeCoin()
         {
             _count += _value;

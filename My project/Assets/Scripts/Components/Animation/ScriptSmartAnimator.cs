@@ -4,6 +4,7 @@ using UnityEngine.Events;
 
 public class ScriptSmartAnimator : MonoBehaviour
 {
+    [SerializeField] bool _isPlaying = true;
     [SerializeField][Range(1, 60)] int _frameRate = 10;
     [SerializeField] UnityEvent<string> _onComplete;
     [SerializeField] Clip[] _clips;
@@ -13,15 +14,20 @@ public class ScriptSmartAnimator : MonoBehaviour
     float _secondsPerFrame;
     float _nextFrameTime;
     int _currentFrame;
-    bool _isPlaying = true;
+    
 
-    int _currentClip;
+    int _currentClip = 0;
 
     private void Start()
     {
         _renderer = GetComponent<SpriteRenderer>();
         _secondsPerFrame = 1f / _frameRate;
-        _currentClip = 0;
+        _nextFrameTime = Time.time;
+    }
+    public void Play(bool value)
+    {
+        _isPlaying = value;
+        _currentFrame = 0;
     }
     public void SetClip(string name)
     {
@@ -35,8 +41,9 @@ public class ScriptSmartAnimator : MonoBehaviour
             }
         }
     }
-    void Update()
+    void FixedUpdate()
     {
+        if (!_isPlaying) return;
         if (_nextFrameTime > Time.time) return;
 
         var clip = _clips[_currentClip];

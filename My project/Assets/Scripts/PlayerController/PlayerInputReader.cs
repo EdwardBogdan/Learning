@@ -24,7 +24,7 @@ namespace MyProject.Player
 
         Vector3 _currentPosition;
 
-        void FixedUpdate()
+        void Update()
         {
             _currentPosition = transform.position;
             player.SetFlags(IsGrounded(), IsWallHitLeft(), IsWallHitRight());

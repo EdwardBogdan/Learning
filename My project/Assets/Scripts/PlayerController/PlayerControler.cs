@@ -12,9 +12,10 @@ namespace MyProject.Player
         
         [SerializeField] LayerMask _interactionLayer;
 
+        [SerializeField] ParticleSystem _particleSystem;
+
         Rigidbody2D _rigidbody;
         Animator _animator;
-        SpriteRenderer _spriteRenderer;
 
         Vector2 _direction;
 
@@ -43,11 +44,11 @@ namespace MyProject.Player
             float _directionX = vector.x;
             if (_directionX > 0)
             {
-                _spriteRenderer.flipX = false;
+                transform.localScale = Vector3.one;
             }
             else if (_directionX < 0)
             {
-                _spriteRenderer.flipX = true;
+                transform.localScale = new(-1, 1, 1);
             }
             _animator.SetBool(keyIsRunning, _directionX != 0);
             _direction = new(_directionX, vector.y);
@@ -69,6 +70,18 @@ namespace MyProject.Player
             _animator.SetTrigger(keyHit);
             _rigidbody.velocity = new(_rigidbody.velocity.x, _jumpSpeedDamage);
             Debug.Log($"HP: {GetComponent<HealthComponent>().Health}");
+
+            DisposeCoin();
+        }
+        public void DisposeCoin()
+        {
+            var _numCoinToDispose = Mathf.Min(CoinTriger._count, 5);
+            CoinTriger._count -= _numCoinToDispose;
+            var burst = _particleSystem.emission.GetBurst(0);
+            burst.count = _numCoinToDispose;
+            _particleSystem.emission.SetBurst(0, burst);
+            //_particleSystem.gameObject.SetActive(true);
+            _particleSystem.Play();
         }
         public void Death()
         {
@@ -137,7 +150,6 @@ namespace MyProject.Player
         {
             _rigidbody = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
-            _spriteRenderer = GetComponent<SpriteRenderer>();
         }
     }
 }

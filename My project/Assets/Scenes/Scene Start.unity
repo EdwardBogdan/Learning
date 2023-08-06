@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portals
       objectReference: {fileID: 0}
+    - target: {fileID: 376619729815411598, guid: e5487a9085443804f86a96b955d1d8d8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8377799167113306592, guid: e5487a9085443804f86a96b955d1d8d8, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -274,6 +278,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 729154678}
     m_Modifications:
+    - target: {fileID: 3552525172911590770, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5746932326403830386, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
       propertyPath: m_Name
       value: CoinSilver (2)
@@ -406,7 +414,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -64182639
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -9985,6 +9993,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 729154678}
     m_Modifications:
+    - target: {fileID: 3552525172911590770, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5746932326403830386, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
       propertyPath: m_Name
       value: CoinSilver
@@ -10190,7 +10202,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1858027709
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -10431,6 +10443,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 729154678}
     m_Modifications:
+    - target: {fileID: 3552525172911590770, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5746932326403830386, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
       propertyPath: m_Name
       value: CoinSilver (3)
@@ -10550,6 +10566,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 729154678}
     m_Modifications:
+    - target: {fileID: 3552525172911590770, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5746932326403830386, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
       propertyPath: m_Name
       value: CoinSilver (4)
@@ -10726,6 +10746,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 729154678}
     m_Modifications:
+    - target: {fileID: 3552525172911590770, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5746932326403830386, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
       propertyPath: m_Name
       value: CoinSilver (5)
@@ -10783,6 +10807,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 729154678}
     m_Modifications:
+    - target: {fileID: 3552525172911590770, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5746932326403830386, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
       propertyPath: m_Name
       value: CoinSilver (6)
@@ -10840,6 +10868,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 729154678}
     m_Modifications:
+    - target: {fileID: 3552525172911590770, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5746932326403830386, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
       propertyPath: m_Name
       value: CoinSilver (7)
@@ -10897,6 +10929,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 729154678}
     m_Modifications:
+    - target: {fileID: 3552525172911590770, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5746932326403830386, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
       propertyPath: m_Name
       value: CoinSilver (1)
@@ -11020,7 +11056,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -64182639
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -11730,6 +11766,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 729154678}
     m_Modifications:
+    - target: {fileID: 3552525172911590770, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5746932326403830386, guid: 09ce8defceb991940adb4cdcf5df20df, type: 3}
       propertyPath: m_Name
       value: CoinSilver (8)
@@ -12304,9 +12344,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7824644371059375233, guid: fa9cd3aebd0dbb740853cb8591631e33, type: 3}
-      propertyPath: _jumpSpeed
-      value: 10
+    - target: {fileID: 7824644371059375232, guid: fa9cd3aebd0dbb740853cb8591631e33, type: 3}
+      propertyPath: _leftWallCheckerStart.x
+      value: -0.265
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824644371059375232, guid: fa9cd3aebd0dbb740853cb8591631e33, type: 3}
+      propertyPath: _leftWallCheckerFinish.x
+      value: -0.265
       objectReference: {fileID: 0}
     - target: {fileID: 7824644371059375235, guid: fa9cd3aebd0dbb740853cb8591631e33, type: 3}
       propertyPath: m_RootOrder
@@ -12314,11 +12358,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7824644371059375235, guid: fa9cd3aebd0dbb740853cb8591631e33, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 7824644371059375235, guid: fa9cd3aebd0dbb740853cb8591631e33, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7824644371059375235, guid: fa9cd3aebd0dbb740853cb8591631e33, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12355,10 +12399,6 @@ PrefabInstance:
     - target: {fileID: 7824644371059375236, guid: fa9cd3aebd0dbb740853cb8591631e33, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7824644371059375236, guid: fa9cd3aebd0dbb740853cb8591631e33, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa9cd3aebd0dbb740853cb8591631e33, type: 3}
@@ -12569,11 +12609,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8783973487719209915, guid: 1342c9d83d4e07a4facf533fb28e0245, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5.022222
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783973487719209915, guid: 1342c9d83d4e07a4facf533fb28e0245, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.34008998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783973487719209915, guid: 1342c9d83d4e07a4facf533fb28e0245, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 8783973487775950225, guid: 1342c9d83d4e07a4facf533fb28e0245, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 809633069}
+    - target: {fileID: 8783973487775950230, guid: 1342c9d83d4e07a4facf533fb28e0245, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.800889
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783973487775950230, guid: 1342c9d83d4e07a4facf533fb28e0245, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.66400003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783973487775950230, guid: 1342c9d83d4e07a4facf533fb28e0245, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1342c9d83d4e07a4facf533fb28e0245, type: 3}
