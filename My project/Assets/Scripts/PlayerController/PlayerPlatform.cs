@@ -7,11 +7,11 @@ namespace MyProject.Player
     {
         [SerializeField] float _ignoreTime = 0.25f;
         Collider2D _currentCollider;
-        PlayerControler _player;
+        PlayerPhysicController _player;
 
         void Awake()
         {
-            _player = GetComponent<PlayerControler>();
+            _player = GetComponent<PlayerPhysicController>();
         }
         void FixedUpdate()
         {

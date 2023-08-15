@@ -1,3 +1,5 @@
+using MyProject.Utils;
+using UnityEditor;
 using UnityEngine;
 
 namespace MyProject.Components
@@ -5,10 +7,11 @@ namespace MyProject.Components
     public class DrawSphere : MonoBehaviour
     {
         [SerializeField] float _radius;
-        private void OnDrawGizmos()
+
+        private void OnDrawGizmosSelected()
         {
-            Gizmos.color = Color.red;
-            Gizmos.DrawSphere(transform.position, _radius);
+            Handles.color = HandlesUtils.TransporentColorRed;
+            Handles.DrawSolidDisc(transform.position, Vector3.forward, _radius);
         }
     }
 }

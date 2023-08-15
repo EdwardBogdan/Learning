@@ -1,3 +1,4 @@
+using MyProject.Components;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,13 +6,7 @@ namespace MyProject.Player
 {
     public class PlayerInputReader : MonoBehaviour
     {
-        [SerializeField] PlayerControler player;
-
-        [Space(10)]
-        [Header("Ground Checker")]
-        [SerializeField] Vector3 _groundCheckPosition;
-        [SerializeField] float _groundCheckRadius;
-        [SerializeField] LayerMask _groundCheckLayer;
+        [SerializeField] PlayerController player;
 
         [Space(10)]
         [Header("Wallhit Checker")]
@@ -22,36 +17,35 @@ namespace MyProject.Player
         [SerializeField] Vector3 _rightWallCheckerStart;
         [SerializeField] Vector3 _rightWallCheckerFinish;
 
-        Vector3 _currentPosition;
+        PlayerPhysicController _playerPhysic;
+        Vector3 _currentPosition => transform.position;
 
+        private void Awake()
+        {
+            _playerPhysic = GetComponent<PlayerPhysicController>();
+        }
         void Update()
         {
-            _currentPosition = transform.position;
-            player.SetFlags(IsGrounded(), IsWallHitLeft(), IsWallHitRight());
+            _playerPhysic.SetFlags(IsWallHitLeft(), IsWallHitRight());
         }
         public void OnMovement(InputAction.CallbackContext context)
         {
             Vector2 vector = context.ReadValue<Vector2>();
-            player.SetDirection(vector);
+            _playerPhysic.SetDirection(vector);
         }
-        public void OnSayHello(InputAction.CallbackContext context)
+        public void OnAttackSimple(InputAction.CallbackContext context)
         {
             if (context.canceled)
             {
-                Debug.Log("Hello World");
+                player.AttackSimpleTriger();
             }
         }
         public void OnInteract(InputAction.CallbackContext context)
         {
             if (context.canceled)
             {
-                player.Interact();
+                player.InteractTriger();
             }
-        }
-        bool IsGrounded()
-        {
-            var hit = Physics2D.CircleCast(_currentPosition + _groundCheckPosition, _groundCheckRadius, Vector3.down, 0, _groundCheckLayer);
-            return hit.collider != null;
         }
         bool IsWallHitLeft()
         {
@@ -95,11 +89,8 @@ namespace MyProject.Player
             }
             return false;
         }
-        void OnDrawGizmos()
+        void OnDrawGizmosSelected()
         {
-            Gizmos.color = IsGrounded() ? Color.green : Color.red;
-            Gizmos.DrawSphere(_currentPosition + _groundCheckPosition, _groundCheckRadius);
-
             Gizmos.color = IsWallHitLeft() ? Color.red : Color.green;
             Gizmos.DrawLine(_currentPosition + _leftWallCheckerStart, _currentPosition + _leftWallCheckerFinish);
 

@@ -15,7 +15,7 @@ namespace MyProject.Components
             {
                 if (par._name == name)
                 {
-                    GameObject partical = par.spawner.Spawn();
+                    GameObject partical = par.spawner.SpawnObject();
                     ScriptSmartAnimator scriptSmartAnimator = partical?.GetComponent<ScriptSmartAnimator>();
                     if (scriptSmartAnimator != null)
                     {

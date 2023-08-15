@@ -28,7 +28,7 @@ TagManager:
   - 
   - Interactable
   - 
-  - 
+  - Trash
   - 
   - 
   - 
@@ -50,19 +50,22 @@ TagManager:
   - name: Ground
     uniqueID: 4230784657
     locked: 0
-  - name: Spikes
-    uniqueID: 2085804459
+  - name: Trash
+    uniqueID: 3409758877
+    locked: 0
+  - name: Wires
+    uniqueID: 3397749517
     locked: 0
   - name: Portals
     uniqueID: 418706397
     locked: 0
+  - name: Spikes
+    uniqueID: 2085804459
+    locked: 0
   - name: Interactable
     uniqueID: 2031095315
     locked: 0
-  - name: Player
-    uniqueID: 3987901643
-    locked: 0
-  - name: Coins
+  - name: Items
     uniqueID: 2133818583
     locked: 0
   - name: Barrels
@@ -70,6 +73,9 @@ TagManager:
     locked: 0
   - name: Partical
     uniqueID: 2761738499
+    locked: 0
+  - name: Player
+    uniqueID: 3987901643
     locked: 0
   - name: Grass
     uniqueID: 1858027709

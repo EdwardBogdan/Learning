@@ -7,7 +7,7 @@ namespace MyProject.Player
     public class PlayerSpawner : MonoBehaviour
     {
         public static bool _LRPosition = true; //true = left, false = right;
-        [SerializeField] PlayerControler _player;
+        [SerializeField] PlayerController _player;
         [SerializeField] Transform _spawnLeft;
         [SerializeField] Transform _spawnRight;
 

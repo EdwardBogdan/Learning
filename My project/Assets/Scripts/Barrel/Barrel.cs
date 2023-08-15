@@ -1,36 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
+using MyProject.Components;
 using UnityEngine;
 
-namespace MyProject.Objects
+namespace MyProject.Props
 {
     public class Barrel : MonoBehaviour
     {
-        Rigidbody2D _body;
-        Animator _animator;
-        bool _falling;
-        static readonly int keyVibration = Animator.StringToHash("Vibration");
+        [SerializeField] GroundCheckComponent _ground;
+        [SerializeField] AutoBoxAllCastComponent _fallHitCast;
+        ScriptSmartAnimator _animator;
+        
+        static readonly string keyVibration = "Vibration";
+        static readonly string keyHit = "Hit";
+
 
         private void Awake()
         {
-            _animator = GetComponent<Animator>();
-            _body = GetComponent<Rigidbody2D>();
+            _animator = GetComponent<ScriptSmartAnimator>();
         }
-        private void FixedUpdate()
+        private void Update()
         {
-            if (_body.velocity.y < -2)
+            if (!_ground.isGrounded)
             {
-                _falling = true;
+                _fallHitCast.enabled = true;
             }
-            if (_falling && _body.velocity.y >= 0)
-            {
-                Vibration();
-                _falling = false;
-            }
+        }
+        public void Hit()
+        {
+            _animator.SetClip(keyHit);
         }
         public void Vibration()
         {
-            _animator.SetTrigger(keyVibration);
+            _animator.SetClip(keyVibration);
         }
     }
 }

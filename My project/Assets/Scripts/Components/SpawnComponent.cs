@@ -8,12 +8,17 @@ namespace MyProject.Components
         [SerializeField] Transform _target;
         [SerializeField] GameObject _prefab;
 
-        [ContextMenu("Spawn")]
-        public GameObject Spawn()
+        
+        public GameObject SpawnObject()
         {
             GameObject prefab = Instantiate(_prefab, _target.position, Quaternion.identity);
             prefab.transform.localScale = transform.lossyScale;
             return prefab;
+        }
+        [ContextMenu("Spawn")]
+        public void Spawn()
+        {
+            SpawnObject();
         }
     }
 }
