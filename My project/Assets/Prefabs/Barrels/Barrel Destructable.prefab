@@ -162,7 +162,6 @@ GameObject:
   - component: {fileID: 6456377362129015848}
   - component: {fileID: 6456377362129015849}
   - component: {fileID: 6456377362129015850}
-  - component: {fileID: 6456377362129015851}
   - component: {fileID: 6456377362129015852}
   - component: {fileID: 6456377362129015853}
   - component: {fileID: 6456377362129015854}
@@ -231,7 +230,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1650804989
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ae4175b816b23124ca084b8c2c0c9f1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -434,34 +433,22 @@ MonoBehaviour:
     _action:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 6456377362129015850}
-          m_TargetAssemblyTypeName: MyProject.Props.Barrel, Assembly-CSharp
-          m_MethodName: Vibration
-          m_Mode: 1
+        - m_Target: {fileID: 6456377362129015848}
+          m_TargetAssemblyTypeName: ScriptSmartAnimator, Assembly-CSharp
+          m_MethodName: SetClip
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Vibration
             m_BoolArgument: 0
           m_CallState: 2
   - _speedMark: -15
     _action:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 6456377362129015850}
-          m_TargetAssemblyTypeName: MyProject.Props.Barrel, Assembly-CSharp
-          m_MethodName: Hit
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 6456377361793188611}
           m_TargetAssemblyTypeName: MyProject.Components.DamageMakerComponent, Assembly-CSharp
           m_MethodName: DealDamage
@@ -489,125 +476,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ground: {fileID: 6456377361793188608}
   _fallHitCast: {fileID: 6456377361793188612}
---- !u!114 &6456377362129015851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6456377362129015825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f214fb7310892446b61f9a10b1dc4c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UpdateCast: 0
-  _settings:
-  - _name: Under
-    _CheckPoint: {x: 0, y: -0.4}
-    _CheckSize: {x: 0.64, y: 0.03}
-    _layers:
-    - _name: isGrounded
-      _cast: 1
-      _showGizmos: 0
-      _touchAction: 0
-      _oneTime: 0
-      _checkLayer:
-        serializedVersion: 2
-        m_Bits: 896
-      _action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: MyProject.Components.GroundChecker, Assembly-CSharp
-            m_MethodName: IsGrounded
-            m_Mode: 0
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-      _touchedObject: {fileID: 0}
-    - _name: FallingHit
-      _cast: 0
-      _showGizmos: 0
-      _touchAction: 1
-      _oneTime: 1
-      _checkLayer:
-        serializedVersion: 2
-        m_Bits: 1024
-      _action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 6456377362129015854}
-            m_TargetAssemblyTypeName: MyProject.Components.TimeIgnoreCollisionComponent,
-              Assembly-CSharp
-            m_MethodName: GetIgnored
-            m_Mode: 0
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 6456377362129015850}
-            m_TargetAssemblyTypeName: MyProject.Props.Barrel, Assembly-CSharp
-            m_MethodName: FallAttack
-            m_Mode: 0
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 6456377362129015853}
-            m_TargetAssemblyTypeName: MyProject.Components.PushComponent, Assembly-CSharp
-            m_MethodName: AddForce
-            m_Mode: 0
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-      _touchedObject: {fileID: 0}
-  - _name: Over
-    _CheckPoint: {x: 0, y: 0.4}
-    _CheckSize: {x: 0.64, y: 0.03}
-    _layers:
-    - _name: FallingAt
-      _cast: 0
-      _showGizmos: 0
-      _touchAction: 1
-      _oneTime: 1
-      _checkLayer:
-        serializedVersion: 2
-        m_Bits: 1024
-      _action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 6456377362129015850}
-            m_TargetAssemblyTypeName: MyProject.Props.Barrel, Assembly-CSharp
-            m_MethodName: Vibration
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-      _touchedObject: {fileID: 0}
 --- !u!114 &6456377362129015852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,16 +494,16 @@ MonoBehaviour:
   _onHit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6456377362129015850}
-        m_TargetAssemblyTypeName: MyProject.Props.Barrel, Assembly-CSharp
-        m_MethodName: Hit
-        m_Mode: 1
+      - m_Target: {fileID: 6456377362129015848}
+        m_TargetAssemblyTypeName: ScriptSmartAnimator, Assembly-CSharp
+        m_MethodName: SetClip
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Hit
           m_BoolArgument: 0
         m_CallState: 2
   _onHeal:
@@ -760,16 +628,16 @@ MonoBehaviour:
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6456377362129015850}
-        m_TargetAssemblyTypeName: MyProject.Props.Barrel, Assembly-CSharp
-        m_MethodName: Vibration
-        m_Mode: 1
+      - m_Target: {fileID: 6456377362129015848}
+        m_TargetAssemblyTypeName: ScriptSmartAnimator, Assembly-CSharp
+        m_MethodName: SetClip
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Vibration
           m_BoolArgument: 0
         m_CallState: 2
   _tags:

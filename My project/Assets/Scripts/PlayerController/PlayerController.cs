@@ -1,6 +1,6 @@
 using MyProject.Components;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using MyProject.Data;
 
 namespace MyProject.Player
 {
@@ -44,14 +44,19 @@ namespace MyProject.Player
         public void TakeDamage()
         {
             _playerAnimator.TriggerHit();
+            
             Debug.Log($"HP: {GetComponent<HealthComponent>().Health}");
 
             DisposeCoin();
         }
+        public void OnHealthChange(int health)
+        {
+            GameSession.CurrentSession._playerHP = health;
+        }
         public void DisposeCoin()
         {
-            var _numCoinToDispose = Mathf.Min(CoinTriger._count, 5);
-            CoinTriger._count -= _numCoinToDispose;
+            var _numCoinToDispose = Mathf.Min(GameSession.CurrentSession._coins, 5);
+            GameSession.CurrentSession._coins -= _numCoinToDispose;
             var burst = _particleSystem.emission.GetBurst(0);
             burst.count = _numCoinToDispose;
             _particleSystem.emission.SetBurst(0, burst);

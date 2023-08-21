@@ -8,11 +8,11 @@ namespace MyProject.Components
     {
         [SerializeField] int _value;
 
-        public static int _count = 0;
         public void TakeCoin()
         {
-            _count += _value;
-            Debug.Log($"Монет собрано: {_count}");
+            Data.GameSession.CurrentSession._coins += _value;
+
+            Debug.Log($"Монет собрано: {Data.GameSession.CurrentSession._coins}");
         }
     }
 }

@@ -23,12 +23,12 @@ namespace MyProject.Player
         private void Awake()
         {
             _animator = GetComponent<Animator>();
-            SetArming(false);
         }
         public void SetArming(bool _value)
         {
             isArmed = _value;
             _animator.runtimeAnimatorController = _value ? _armedAnimator : _disarmedAnimator;
+            Data.GameSession.CurrentSession._isArmed = _value;
         }
 
         #region keysBool

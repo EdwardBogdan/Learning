@@ -10,6 +10,7 @@ namespace MyProject.Components
         private void Awake()
         {
             _action?.Invoke();
+            Destroy(this);
         }
     }
 }

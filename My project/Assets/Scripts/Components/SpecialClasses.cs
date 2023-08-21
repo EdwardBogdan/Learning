@@ -9,4 +9,10 @@ namespace MyProject.Components
     {
 
     }
+
+    [Serializable]
+    public class UnityEvent_Int : UnityEvent<int>
+    {
+
+    }
 }
