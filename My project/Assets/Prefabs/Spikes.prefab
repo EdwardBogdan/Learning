@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5409659456935723651}
   m_Layer: 7
   m_Name: Spikes
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2085804459
-  m_SortingLayer: 3
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 10de669f0919182489224b96c3947a56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -125,6 +125,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c80e9fff33dee1488162da8471aea2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _checkByTag: 0
+  _tags:
+  - Player
+  - Barrel
+  _checkByLayer: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _enabled: 0
   _action:
     m_PersistentCalls:
       m_Calls:
@@ -140,9 +149,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _tags:
-  - Player
-  - Barrel
 --- !u!114 &5409659456935723651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,4 +161,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99bc2eda3aedb6d4da84dc09016e3c30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _value: 1
+  _damage: 0

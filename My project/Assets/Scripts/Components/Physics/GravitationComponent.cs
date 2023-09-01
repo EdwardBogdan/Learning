@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,11 +7,13 @@ namespace MyProject.Components
 {
     public class GravitationComponent : MonoBehaviour
     {
-        public Vector2 _lastSpeed { get; private set; }
+        public Vector2 LastSpeed { get; private set; }
 
         [SerializeField] float _coefficient;
+        [SerializeField] TouchComponent groundChecker;
+        [SerializeField] UnityEvent _fallingAction;
         [SerializeField] GroundEvent[] _events;
-        [SerializeField] GroundCheckComponent groundChecker;
+        
 
         float _sumCoefficient;
 
@@ -20,40 +23,42 @@ namespace MyProject.Components
         private void Start()
         {
             rigidBody = GetComponent<Rigidbody2D>();
-            Reseting();
+            DropSpeed();
         }
         private void FixedUpdate()
         {
-            if (groundChecker.isGrounded)
+            if (groundChecker.IsTouched)
             {
-                if (_lastSpeed.y <= -2)
+                if (LastSpeed.y <= -2)
                 {
                     Grounding();
                 }
             }
             else if (rigidBody.velocity.y < -2)
             {
-                _lastSpeed = rigidBody.velocity;
+                _fallingAction?.Invoke();
+                LastSpeed = rigidBody.velocity;
                 _sumCoefficient += _coefficient;
-                rigidBody.velocity = new Vector2(_lastSpeed.x, _lastSpeed.y - 1 * _sumCoefficient);
+                rigidBody.velocity = new Vector2(LastSpeed.x, LastSpeed.y - 1 * _sumCoefficient);
             }
         }
-        public void Reseting()
+        public void DropSpeed()
         {
             _sumCoefficient = 0;
-            _lastSpeed = Vector2.zero;
+            LastSpeed = Vector2.zero;
         }
 
-        void Grounding()
+        private void Grounding()
         {
             foreach (GroundEvent _event in _events)
             {
-                if (_lastSpeed.y <= _event._speedMark)
+                if (LastSpeed.y <= _event._speedMark)
                 {
                     _event?._action.Invoke();
+                    break;
                 }
             }
-            Reseting();
+            DropSpeed();
         }
     }
     [Serializable]

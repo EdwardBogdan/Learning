@@ -8,6 +8,7 @@ namespace MyProject.Components
         [SerializeField] float _ignoreTime = 0.25f;
         public void GetIgnored(GameObject _object)
         {
+            if (_object == null) return;
             StartCoroutine(DisableCollision(_object));
         }
         private IEnumerator DisableCollision(GameObject _object)

@@ -5,14 +5,14 @@ namespace MyProject.Props
 {
     public class Barrel : MonoBehaviour
     {
-        [SerializeField] GroundCheckComponent _ground;
-        [SerializeField] AutoBoxAllCastComponent _fallHitCast;        
+        [SerializeField] TouchComponent _ground;
+        [SerializeField] Rigidbody2D _body;
 
-        private void Update()
+        private void FixedUpdate()
         {
-            if (!_ground.isGrounded)
+            if (_body.velocity.y >= 0)
             {
-                _fallHitCast.enabled = true;
+                _ground.Touch(gameObject);
             }
         }
     }

@@ -10,8 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4022681144913153733}
   - component: {fileID: 4022681144913153732}
-  - component: {fileID: 4022681144913153734}
+  - component: {fileID: -7350718620691848387}
+  - component: {fileID: 529736396452955204}
   - component: {fileID: 4022681144913153729}
+  - component: {fileID: 4022681144913153734}
+  - component: {fileID: -5733028124597858574}
   - component: {fileID: 4066209080885928485}
   - component: {fileID: 3167157295451020179}
   - component: {fileID: -9138645909617357390}
@@ -76,9 +79,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2133818583
-  m_SortingLayer: 6
+  m_SortingLayer: 8
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1276189878, guid: 6f0984794454d874c8ac4fc06903a9b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 632ece01e173f524a80be9656551edc4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,7 +92,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4022681144913153734
+--- !u!114 &-7350718620691848387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,50 +101,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 4022681144913153728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f477daa92a51b2d499e0e0efcf361059, type: 3}
+  m_Script: {fileID: 11500000, guid: 055b4dbc6c6217f44a95e704452e8ec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4022681144913153729}
-        m_TargetAssemblyTypeName: MyProject.Components.CoinTriger, Assembly-CSharp
-        m_MethodName: TakeCoin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 3167157295451020179}
-        m_TargetAssemblyTypeName: ScriptSmartAnimator, Assembly-CSharp
-        m_MethodName: SetClip
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Taked
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4066209080885928485}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _tags:
-  - Player
+  _name: CoinGold
+--- !u!114 &529736396452955204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4022681144913153728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006a9557cbdf71443927aa959050067f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4022681144913153729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +129,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d2e5bb4c4b29b43ac86714abfb69fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _value: 10
+  _value: 5
+--- !u!114 &4022681144913153734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4022681144913153728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f477daa92a51b2d499e0e0efcf361059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _checkByTag: 1
+  _tags:
+  - Player
+  _checkByLayer: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4022681144913153729}
+        m_TargetAssemblyTypeName: MyProject.Components.TreasureComponent, Assembly-CSharp
+        m_MethodName: TakeTreasure
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -5733028124597858574}
+        m_TargetAssemblyTypeName: MyProject.Components.SpawnComponent, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -9138645909617357390}
+        m_TargetAssemblyTypeName: DestroyObject, Assembly-CSharp
+        m_MethodName: DestroyTheObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-5733028124597858574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4022681144913153728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf36022fac6b0d449a9688240370f628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 4022681144913153733}
+  _prefab: {fileID: 6029649504172530465, guid: 7c23a798559c23d46a950fd5f83de347, type: 3}
 --- !u!61 &4066209080885928485
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -168,7 +215,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.015, y: 0.015}
+  m_Offset: {x: 0.015000001, y: -0.015}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -179,7 +226,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.1}
+  m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0
 --- !u!114 &3167157295451020179
 MonoBehaviour:
@@ -193,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec350e6739cfc7140aff0417e5d2e107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPlaying: 1
   _frameRate: 8
   _onComplete:
     m_PersistentCalls:
@@ -201,36 +249,14 @@ MonoBehaviour:
   - _name: Idle
     _loop: 1
     sprites:
-    - {fileID: -1276189878, guid: 6f0984794454d874c8ac4fc06903a9b8, type: 3}
-    - {fileID: 1230865160, guid: 6f0984794454d874c8ac4fc06903a9b8, type: 3}
-    - {fileID: -1124922757, guid: 6f0984794454d874c8ac4fc06903a9b8, type: 3}
-    - {fileID: 83713760, guid: 6f0984794454d874c8ac4fc06903a9b8, type: 3}
+    - {fileID: 21300000, guid: 632ece01e173f524a80be9656551edc4, type: 3}
+    - {fileID: 21300000, guid: 91ef84bddd81e4b44a168586c7011dad, type: 3}
+    - {fileID: 21300000, guid: 6061d677d5929f4428bde803d6035826, type: 3}
+    - {fileID: 21300000, guid: eb677bdb42594ac4babd76b3e7fac874, type: 3}
     _allowNextClip: 0
     _onComplete:
       m_PersistentCalls:
         m_Calls: []
-  - _name: Taked
-    _loop: 0
-    sprites:
-    - {fileID: 1424364651, guid: 6f0984794454d874c8ac4fc06903a9b8, type: 3}
-    - {fileID: -1969881900, guid: 6f0984794454d874c8ac4fc06903a9b8, type: 3}
-    - {fileID: 1243396702, guid: 6f0984794454d874c8ac4fc06903a9b8, type: 3}
-    _allowNextClip: 0
-    _onComplete:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: -9138645909617357390}
-          m_TargetAssemblyTypeName: DestroyObject, Assembly-CSharp
-          m_MethodName: DestroyTheObject
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &-9138645909617357390
 MonoBehaviour:
   m_ObjectHideFlags: 0

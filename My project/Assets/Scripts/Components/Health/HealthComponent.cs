@@ -9,6 +9,7 @@ namespace MyProject.Components
         [SerializeField] bool _immortal;
         [SerializeField] int _health;
         [SerializeField] int _maxHealth;
+        [SerializeField] float _hitVelocity;
         [SerializeField] float _immunityTime;
         [SerializeField] UnityEvent _onHit;
         [SerializeField] UnityEvent _onHeal;

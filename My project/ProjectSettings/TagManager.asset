@@ -19,8 +19,8 @@ TagManager:
   - Barrels
   - Platforms
   - Player
-  - 
-  - Coins
+  - Enemy
+  - Items
   - Grass
   - Portals
   - 
@@ -53,9 +53,6 @@ TagManager:
   - name: Decor
     uniqueID: 2133187129
     locked: 0
-  - name: Trash
-    uniqueID: 3409758877
-    locked: 0
   - name: Wires
     uniqueID: 3397749517
     locked: 0
@@ -79,6 +76,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3987901643
+    locked: 0
+  - name: Trash
+    uniqueID: 3409758877
     locked: 0
   - name: Grass
     uniqueID: 1858027709
