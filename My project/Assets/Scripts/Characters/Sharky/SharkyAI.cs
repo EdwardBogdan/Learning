@@ -13,7 +13,7 @@ namespace MyProject.Characters
         [SerializeField] TouchComponent _targerIsVisible;
         [SerializeField] TouchComponent _attackbleArea;
 
-        ParticalManagerComponent _particals;
+        SpawnManagerComponent _particals;
         CharacterPhysicController _physicController;
         SharkyBehaviour _behaviour;
 
@@ -23,7 +23,7 @@ namespace MyProject.Characters
         {
             _physicController = GetComponent<CharacterPhysicController>();
             _behaviour = GetComponent<SharkyBehaviour>();
-            _particals = GetComponent<ParticalManagerComponent>();
+            _particals = GetComponent<SpawnManagerComponent>();
         }
         private void Start()
         {

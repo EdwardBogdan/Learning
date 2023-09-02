@@ -28,5 +28,12 @@ namespace MyProject.Characters
             _attackIndex = Random.Range(1, _countAttackAnimations + 1);
             _animator.SetInteger(animatorKey_AttackIndex, _attackIndex);
         }
+        public override void SetTriggerSpecialAttack()
+        {
+            if (isArmed)
+            {
+                _animator.SetTrigger(animatorKey_SpecialAttack);
+            }
+        }
     }
 }

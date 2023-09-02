@@ -74,11 +74,11 @@ TagManager:
   - name: Partical
     uniqueID: 2761738499
     locked: 0
-  - name: Player
-    uniqueID: 3987901643
-    locked: 0
   - name: Trash
     uniqueID: 3409758877
+    locked: 0
+  - name: Player
+    uniqueID: 3987901643
     locked: 0
   - name: Grass
     uniqueID: 1858027709

@@ -12,6 +12,9 @@ namespace MyProject.Components
         public void DealDamage(GameObject _object)
         {
             HealthComponent healthComponent = _object?.GetComponent<HealthComponent>();
+
+            if (healthComponent == null) return;
+
             healthComponent?.ApplyDamage(_damage);
 
             Vector2 posThis = transform.position;

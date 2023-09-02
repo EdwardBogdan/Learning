@@ -25,6 +25,13 @@ namespace MyProject.Characters.Player
                 _behaviourTriggers.OnTriggerAttack();
             }
         }
+        public void OnKeyThrow(InputAction.CallbackContext context)
+        {
+            if (context.canceled)
+            {
+                _behaviourTriggers.OnTriggerSpecialAttack();
+            }
+        }
         public void OnKeyInteract(InputAction.CallbackContext context)
         {
             if (context.canceled)

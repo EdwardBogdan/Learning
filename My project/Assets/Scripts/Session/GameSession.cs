@@ -7,6 +7,7 @@ namespace MyProject.Data
     public class GameSession : MonoBehaviour
     {
         public int _coins;
+        public int _swords;
 
         public int _playerHP;
         public int _playerMaxHP;

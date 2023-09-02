@@ -6,12 +6,12 @@ using UnityEngine;
 
 namespace MyProject.Components
 {
-    public class ParticalManagerComponent : MonoBehaviour
+    public class SpawnManagerComponent : MonoBehaviour
     {
-        [SerializeField] ParticalObject[] _particals;
+        [SerializeField] SpawnObject[] _objects;
         public void SummonPartical(string name)
         {
-            foreach (ParticalObject par in _particals)
+            foreach (SpawnObject par in _objects)
             {
                 if (par._name == name)
                 {
@@ -26,7 +26,7 @@ namespace MyProject.Components
             }
         }
         [Serializable]
-        class ParticalObject
+        class SpawnObject
         {
             public string _name;
             public SpawnComponent spawner;

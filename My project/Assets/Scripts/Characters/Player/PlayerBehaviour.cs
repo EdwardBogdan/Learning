@@ -22,6 +22,14 @@ namespace MyProject.Characters
             GameSession.CurrentSession._coins -= _numCoinToDispose;
             _drop.Drop();
         }
+        public void OnDisarm()
+        {
+            GameSession.CurrentSession._swords -= 1;
+            if (GameSession.CurrentSession._swords > 0) return;
+
+            var _animator = _animatorController as PlayerAnimationController;
+            _animator.SetArming(false);
+        }
         public void OnTriggerInteract()
         {
             _castInteract.Cast();

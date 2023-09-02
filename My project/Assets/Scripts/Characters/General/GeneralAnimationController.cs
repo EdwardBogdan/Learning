@@ -51,7 +51,7 @@ namespace MyProject.Characters
             _animator.SetTrigger(animatorKey_Attack);
             StartCoroutine(AttackDelay());
         }
-        public void SetTriggerSpecialAttack()
+        public virtual void SetTriggerSpecialAttack()
         {
             _animator.SetTrigger(animatorKey_SpecialAttack);
         }

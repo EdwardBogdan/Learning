@@ -1,4 +1,3 @@
-using MyProject.Characters;
 using UnityEngine;
 
 namespace MyProject.Characters
@@ -8,6 +7,7 @@ namespace MyProject.Characters
         public void ArmPlayer(GameObject _object)
         {
             _object?.GetComponent<PlayerAnimationController>().SetArming(true);
+            Data.GameSession.CurrentSession._swords += 1;
         }
     }
 }
