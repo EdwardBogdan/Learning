@@ -1,8 +1,7 @@
 using MyProject.Utils;
 using UnityEngine;
-using UnityEngine.Events;
 
-namespace MyProject.Components
+namespace MyProject.Components.Triggers
 {
     public class BaseTriggerComponent : MonoBehaviour, INaming
     {

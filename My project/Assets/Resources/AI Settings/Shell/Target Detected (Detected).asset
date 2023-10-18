@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e251c30d69f6a7d4fa3092263137de2b, type: 3}
+  m_Name: Target Detected (Detected)
+  m_EditorClassIdentifier: 
+  stateName: Detected
+  _targetStillDetected: {fileID: 11400000, guid: 454bb56f37a543247be97eca6b46b20b, type: 2}
+  _targetLost: {fileID: 11400000, guid: d72f81cffbf58d5449ac80efe15cedff, type: 2}
+  _aggressionDelay:
+    _time: 0.3

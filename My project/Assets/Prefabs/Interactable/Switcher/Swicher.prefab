@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5536587706786171214}
   - component: {fileID: 5536587706786171210}
   - component: {fileID: 5536587706786171211}
+  - component: {fileID: -7765980318471533813}
   m_Layer: 18
   m_Name: Swicher
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2031095315
-  m_SortingLayer: 5
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 5774581190672780694, guid: 2bfc930e2db1742baa532587a3dcc688, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -173,3 +174,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &-7765980318471533813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5536587706786171215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2cc3ad4d306a9747b6766e8c450c840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _binName: Interactable
+  _object: {fileID: 5536587706786171215}

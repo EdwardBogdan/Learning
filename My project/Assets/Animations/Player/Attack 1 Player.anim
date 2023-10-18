@@ -73,7 +73,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.1
-    functionName: SummonPartical
+    functionName: SpawnTarget
     data: Attack 1
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

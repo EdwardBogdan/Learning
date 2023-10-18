@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace MyProject.Components
+namespace MyProject.Components.ScriptAnimations
 {
     [RequireComponent(typeof(SpriteRenderer))]
     public class ScriptAnimator : MonoBehaviour

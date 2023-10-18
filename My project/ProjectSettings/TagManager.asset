@@ -11,26 +11,26 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - CameraBorder
   - Water
   - UI
-  - BG
+  - 
   - Ground
   - Barrels
   - Platforms
   - Player
   - Enemy
   - Items
-  - Grass
-  - Portals
+  - Dead Bodys
   - 
-  - CameraBorder
+  - Projectile
+  - 
   - 
   - Interactable
   - 
   - Trash
   - 
-  - 
+  - Totem
   - 
   - 
   - 
@@ -47,39 +47,33 @@ TagManager:
   - name: BG
     uniqueID: 1427311691
     locked: 0
+  - name: Interactable
+    uniqueID: 2031095315
+    locked: 0
+  - name: Trash
+    uniqueID: 3409758877
+    locked: 0
   - name: Ground
     uniqueID: 4230784657
-    locked: 0
-  - name: Decor
-    uniqueID: 2133187129
     locked: 0
   - name: Wires
     uniqueID: 3397749517
     locked: 0
-  - name: Portals
-    uniqueID: 418706397
-    locked: 0
-  - name: Spikes
-    uniqueID: 2085804459
-    locked: 0
-  - name: Interactable
-    uniqueID: 2031095315
-    locked: 0
-  - name: Items
-    uniqueID: 2133818583
-    locked: 0
-  - name: Barrels
+  - name: Boxes
     uniqueID: 2644162307
     locked: 0
-  - name: Partical
-    uniqueID: 2761738499
-    locked: 0
-  - name: Trash
-    uniqueID: 3409758877
+  - name: Enemy
+    uniqueID: 1147323097
     locked: 0
   - name: Player
     uniqueID: 3987901643
     locked: 0
   - name: Grass
     uniqueID: 1858027709
+    locked: 0
+  - name: Items
+    uniqueID: 2133818583
+    locked: 0
+  - name: Partical
+    uniqueID: 2761738499
     locked: 0

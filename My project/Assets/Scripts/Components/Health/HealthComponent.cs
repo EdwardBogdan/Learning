@@ -1,8 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
-using System.Collections;
+using MyProject.Utils;
 
-namespace MyProject.Components
+namespace MyProject.Components.Health
 {
     public class HealthComponent : MonoBehaviour
     {
@@ -10,16 +10,18 @@ namespace MyProject.Components
         [SerializeField] int _health;
         [SerializeField] int _maxHealth;
         [SerializeField] float _hitVelocity;
-        [SerializeField] float _immunityTime;
+        [SerializeField] Cooldown _immunity;
+
         [SerializeField] UnityEvent _onHit;
         [SerializeField] UnityEvent _onHeal;
         [SerializeField] UnityEvent _onDead;
         [SerializeField] UnityEvent_Int _onChange;
 
+        public Cooldown ImmunityCooldown => _immunity;
         public int Health => _health;
         public int MaxHealth => _maxHealth;
+        public float HitVelocity => _hitVelocity;
 
-        bool _immunityActivated = false;
         public void SetHealth(int value)
         {
             _health = Mathf.Clamp(value, 0, _maxHealth);
@@ -41,27 +43,17 @@ namespace MyProject.Components
         }
         public void ApplyDamage(int damage)
         {
-            if (!_immunityActivated)
+            if (_immortal) damage = 0;
+            _health -= damage;
+
+            _onChange?.Invoke(_health);
+
+            if (_health <= 0)
             {
-                if (_immortal) damage = 0;
-                _health -= damage;
-
-                _onChange?.Invoke(_health);
-
-                if (_health <= 0)
-                {
-                    _onDead?.Invoke();
-                    return;
-                }
-                StartCoroutine(ImmunityActivator());
-                _onHit?.Invoke();
+                _onDead?.Invoke();
+                return;
             }
-        }
-        private IEnumerator ImmunityActivator()
-        {
-            _immunityActivated = true;
-            yield return new WaitForSeconds(_immunityTime);
-            _immunityActivated = false;
+            _onHit?.Invoke();
         }
     }
 }

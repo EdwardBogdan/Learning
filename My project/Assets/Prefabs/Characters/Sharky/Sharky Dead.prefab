@@ -1,5 +1,130 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6758924168106032236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6677924556912094531}
+  - component: {fileID: 2271054607213132557}
+  - component: {fileID: 4904921442120781846}
+  - component: {fileID: 6316950486955892633}
+  m_Layer: 0
+  m_Name: Gravitation Event
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6677924556912094531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758924168106032236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7084972491299507273}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2271054607213132557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758924168106032236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2fbb8eddbb4c84ca3acff74e25f100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 7084972491299507274}
+  _events:
+  - _speedMark: 0
+    _action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3989671461652776085}
+          m_TargetAssemblyTypeName: MyProject.Components.ScriptAnimations.ScriptSmartAnimator,
+            Assembly-CSharp
+          m_MethodName: SetClip
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Dead Ground
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!61 &4904921442120781846
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758924168106032236}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.05, y: -0.36}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0625, y: 0.9375}
+    newSize: {x: 1.0625, y: 0.9375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.66, y: 0.065}
+  m_EdgeRadius: 0
+--- !u!114 &6316950486955892633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758924168106032236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470093947eb541e479a9fb048f37e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _checkByTag: 0
+  _tags: []
+  _checkByLayer: 1
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  _action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2271054607213132557}
+        m_TargetAssemblyTypeName: MyProject.Components.Physic.GravitationComponent,
+          Assembly-CSharp
+        m_MethodName: OnGrounding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7084972491299507271
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +137,10 @@ GameObject:
   - component: {fileID: 7084972491299507272}
   - component: {fileID: 7084972491299507275}
   - component: {fileID: 7084972491299507274}
-  m_Layer: 20
+  - component: {fileID: 3989671461652776085}
+  - component: {fileID: 1981144397718579135}
+  - component: {fileID: 679462692014170580}
+  m_Layer: 13
   m_Name: Sharky Dead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +158,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6677924556912094531}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -73,9 +202,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -885208419
-  m_SortingLayer: 11
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 59470da093ea7454bbff03a4ea171192, type: 3}
+  m_SortingLayer: 3
+  m_SortingOrder: -5
+  m_Sprite: {fileID: 21300000, guid: 5d6fecda772b97f40a3edbeef4c8e925, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -99,7 +228,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05, y: -0.155}
+  m_Offset: {x: -0.05, y: -0.118}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +239,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.66, y: 0.56}
+  m_Size: {x: 0.66, y: 0.487}
   m_EdgeRadius: 0
 --- !u!50 &7084972491299507274
 Rigidbody2D:
@@ -133,3 +262,83 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3989671461652776085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7084972491299507271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec350e6739cfc7140aff0417e5d2e107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isPlaying: 1
+  _frameRate: 10
+  _clips:
+  - _name: Dead Hit
+    _loop: 0
+    sprites:
+    - {fileID: 21300000, guid: 5d6fecda772b97f40a3edbeef4c8e925, type: 3}
+    - {fileID: 21300000, guid: 2bd0975ea83d39d458f19baac86712c1, type: 3}
+    - {fileID: 21300000, guid: 373bd1f09c5d5664a9b125f17fdabdc3, type: 3}
+    - {fileID: 21300000, guid: 3ba235042e278c54c9bbbe8b25fb2d4f, type: 3}
+    _allowNextClip: 0
+    _onComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  - _name: Dead Ground
+    _loop: 0
+    sprites:
+    - {fileID: 21300000, guid: a84056825c05c0546886e10d8f9353e7, type: 3}
+    - {fileID: 21300000, guid: b74a8269b951a18459d59753443dd7a5, type: 3}
+    - {fileID: 21300000, guid: 95719ea039201b74ba62201e2f13821d, type: 3}
+    - {fileID: 21300000, guid: 59470da093ea7454bbff03a4ea171192, type: 3}
+    _allowNextClip: 0
+    _onComplete:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1981144397718579135}
+          m_TargetAssemblyTypeName: MyProject.Components.Shutdown.DestroyObjectComponent,
+            Assembly-CSharp
+          m_MethodName: DestroyObjects
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1981144397718579135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7084972491299507271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56fab65515740114cab20cb03deacd76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objects:
+  - {fileID: 6758924168106032236}
+  - {fileID: 3989671461652776085}
+  - {fileID: 1981144397718579135}
+--- !u!114 &679462692014170580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7084972491299507271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2cc3ad4d306a9747b6766e8c450c840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _binName: Bodys
+  _object: {fileID: 7084972491299507271}

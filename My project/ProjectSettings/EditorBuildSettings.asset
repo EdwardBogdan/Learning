@@ -5,11 +5,23 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Scene Ship.unity
-    guid: ca6ffcda582bd464cb2051ea2e19aab2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene Test.unity
     guid: 6ea959e0955c74448be5ebbd166298c8
+  - enabled: 1
+    path: Assets/Scenes/Scene Presentation Cannon.unity
+    guid: 7be7edeac09f70f4d9980f2aadaeff20
+  - enabled: 1
+    path: Assets/Scenes/Scene Presentation Enemies.unity
+    guid: f233f0f9f72d67c448211f3db623056c
+  - enabled: 1
+    path: Assets/Scenes/Scene Presentation Slimes.unity
+    guid: 8b29dda9ad0525345a4bd1ff303138b4
+  - enabled: 1
+    path: Assets/Scenes/Scene Presentation Totems.unity
+    guid: 2316695da264d1d4a949e6e2796e77bb
+  - enabled: 1
+    path: Assets/Scenes/Scene Main.unity
+    guid: 3eaf9d1bf92a0ff41bd88b09fb1fef7f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 80ad01703c290d5408e0568c810929c5, type: 2}

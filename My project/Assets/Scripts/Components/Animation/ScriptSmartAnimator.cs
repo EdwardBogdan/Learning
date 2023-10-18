@@ -2,85 +2,87 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ScriptSmartAnimator : MonoBehaviour
+namespace MyProject.Components.ScriptAnimations
 {
-    [SerializeField] bool _isPlaying = true;
-    [SerializeField][Range(1, 60)] int _frameRate = 10;
-    [SerializeField] UnityEvent<string> _onComplete;
-    [SerializeField] Clip[] _clips;
-
-    SpriteRenderer _renderer;
-
-    float _secondsPerFrame;
-    float _nextFrameTime;
-    int _currentFrame;
-    
-
-    int _currentClip = 0;
-
-    private void Start()
+    [RequireComponent(typeof(SpriteRenderer))]
+    public class ScriptSmartAnimator : MonoBehaviour
     {
-        _renderer = GetComponent<SpriteRenderer>();
-        _secondsPerFrame = 1f / _frameRate;
-        _nextFrameTime = Time.time;
-    }
-    public void Play(bool value)
-    {
-        _isPlaying = value;
-        _currentFrame = 0;
-    }
-    public void SetClip(string name)
-    {
-        for (int x = 0; x < _clips.Length; x++)
+        [SerializeField] bool _isPlaying = true;
+        [SerializeField][Range(1, 60)] int _frameRate = 10;
+        [SerializeField] Clip[] _clips;
+
+        SpriteRenderer _renderer;
+
+        float _secondsPerFrame;
+        float _nextFrameTime;
+        int _currentFrame;
+
+
+        int _currentClip = 0;
+
+        private void Start()
         {
-            if (_clips[x].Name == name)
+            _renderer = GetComponent<SpriteRenderer>();
+            _secondsPerFrame = 1f / _frameRate;
+            _nextFrameTime = Time.time;
+        }
+        public void Play(bool value)
+        {
+            _isPlaying = value;
+            _currentFrame = 0;
+        }
+        public void SetClip(string name)
+        {
+            for (int x = 0; x < _clips.Length; x++)
             {
-                _currentClip = x;
-                _currentFrame = 0;
-                break;
+                if (_clips[x].Name == name)
+                {
+                    _currentClip = x;
+                    _currentFrame = 0;
+                    break;
+                }
             }
         }
-    }
-    void FixedUpdate()
-    {
-        if (!_isPlaying) return;
-        if (_nextFrameTime > Time.time) return;
-
-        var clip = _clips[_currentClip];
-        if (_currentFrame >= clip.Sprites.Length)
+        void FixedUpdate()
         {
-            if (clip.Loop)
+            if (!_isPlaying) return;
+            if (_nextFrameTime > Time.time) return;
+
+            var clip = _clips[_currentClip];
+            if (_currentFrame >= clip.Sprites.Length)
             {
-                _currentFrame = 0;
-            }
-            else
-            {
-                clip.ONComplete?.Invoke();
-                _onComplete?.Invoke(clip.Name);
-                enabled = _isPlaying = clip.AllowNextClip;
+                if (clip.Loop)
+                {
+                    _currentFrame = 0;
+                }
+                else
+                {
+                    clip.ONComplete?.Invoke();
+                    enabled = _isPlaying = clip.AllowNextClip;
+                }
+
+                return;
             }
 
-            return;
+            _renderer.sprite = clip.Sprites[_currentFrame];
+            _nextFrameTime += _secondsPerFrame;
+            _currentFrame++;
         }
 
-        _renderer.sprite = clip.Sprites[_currentFrame];
-        _nextFrameTime += _secondsPerFrame;
-        _currentFrame++;
-    }
+        [Serializable]
+        class Clip
+        {
+            [SerializeField] private string _name;
+            [SerializeField] private bool _loop;
+            [SerializeField] private Sprite[] sprites;
+            [SerializeField] private bool _allowNextClip;
+            [SerializeField] private UnityEvent _onComplete;
 
-    [Serializable]
-    class Clip
-    {
-        [SerializeField] private string _name;
-        [SerializeField] private bool _loop;
-        [SerializeField] private Sprite[] sprites;
-        [SerializeField] private bool _allowNextClip;
-        [SerializeField] private UnityEvent _onComplete;
-
-        public string Name => _name;
-        public bool Loop => _loop;
-        public Sprite[] Sprites => sprites;
-        public bool AllowNextClip => _allowNextClip;
-        public UnityEvent ONComplete => _onComplete;
+            public string Name => _name;
+            public bool Loop => _loop;
+            public Sprite[] Sprites => sprites;
+            public bool AllowNextClip => _allowNextClip;
+            public UnityEvent ONComplete => _onComplete;
+        }
     }
 }

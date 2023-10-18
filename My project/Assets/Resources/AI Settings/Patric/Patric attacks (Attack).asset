@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8120ead4c80007740b48087e2a499850, type: 3}
+  m_Name: Patric attacks (Attack)
+  m_EditorClassIdentifier: 
+  stateName: Attack
+  _attackFinished: {fileID: 11400000, guid: aaea94782ec6dea4da2a9752c823d451, type: 2}
+  _sec: 1.5

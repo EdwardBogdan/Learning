@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8198354737713191994}
   - component: {fileID: 6294342677516061746}
   - component: {fileID: 5577105641970303048}
+  - component: {fileID: -1929196416079125535}
   m_Layer: 0
   m_Name: Dust Fall Partical
   m_TagString: Untagged
@@ -100,9 +101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isPlaying: 1
   _frameRate: 10
-  _onComplete:
-    m_PersistentCalls:
-      m_Calls: []
   _clips:
   - _name: Fall
     _loop: 0
@@ -117,8 +115,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 5577105641970303048}
-          m_TargetAssemblyTypeName: DestroyObject, Assembly-CSharp
-          m_MethodName: DestroyTheObject
+          m_TargetAssemblyTypeName: MyProject.Components.Shutdown.DestroyObjectComponent,
+            Assembly-CSharp
+          m_MethodName: DestroyObjects
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -140,4 +139,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56fab65515740114cab20cb03deacd76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _objects:
+  - {fileID: 6029649504172530465}
+--- !u!114 &-1929196416079125535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6029649504172530465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2cc3ad4d306a9747b6766e8c450c840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _binName: Particals
   _object: {fileID: 6029649504172530465}

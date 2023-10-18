@@ -10,6 +10,11 @@ namespace MyProject.Utils
 
         private float _timesUp;
 
+        public Cooldown(float time)
+        {
+            _time = time;
+            _timesUp = 0f;
+        }
         public bool IsReady => _timesUp <= Time.time;
         public void Reset()
         {
