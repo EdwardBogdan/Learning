@@ -1,32 +1,41 @@
 using MyProject.Components.Cast;
 using MyProject.Components.ScriptAnimations;
+using MyProject.Utils;
+using System.Collections;
 using UnityEngine;
 
 namespace MyProject.Characters.Totem
 {
     public class TotemBase : MonoBehaviour
     {
-        protected CastComponent _castNext;
-        protected ScriptSmartAnimator _animator;
+        [SerializeField] private string _attackClipName;
+        [SerializeField] private CastComponent _castNext;
+        [SerializeField] private ScriptSmartAnimator _animator;
+        [SerializeField] private Cooldown _delay;
 
-        private void Awake()
-        {
-            _castNext = GetComponent<CastComponent>();
-            _animator = GetComponent<ScriptSmartAnimator>();
-        }
-        public void Cast()
-        {
-            _castNext.Cast();
-        }
+        public ScriptSmartAnimator Animator => _animator;
+
         public void OnCast(GameObject _object)
         {
             if (!_object.TryGetComponent<TotemBase>(out var totem)) return;
 
-            totem.Action();
+            totem.AttackTrigger();
         }
-        public virtual void Action()
+        public void AttackTrigger()
         {
-            Cast();
+            _delay.Reset();
+            StartCoroutine(Delayer());
+        }
+
+        private IEnumerator Delayer()
+        {
+            while (!_delay.IsReady)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+
+            _animator.SetClip(_attackClipName);
+            _castNext.Cast();
         }
     }
 }

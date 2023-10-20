@@ -1,11 +1,11 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3606800946552148065
+--- !u!1001 &792723722743914275
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 349699207465806627}
+    m_TransformParent: {fileID: 1392515545724016084}
     m_Modifications:
     - target: {fileID: 6499864992516460201, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}
       propertyPath: m_RootOrder
@@ -53,16 +53,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8344749687658467804, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}
       propertyPath: m_Name
-      value: Smoke
+      value: Smoke Effect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}
---- !u!1001 &6038063941941786792
+--- !u!1001 &4299300342468816070
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 8411748558333775750}
+    m_TransformParent: {fileID: 1234488904169011182}
     m_Modifications:
     - target: {fileID: 6499864992516460201, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}
       propertyPath: m_RootOrder
@@ -86,15 +86,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6499864992516460201, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6499864992516460201, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6499864992516460201, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6499864992516460201, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -110,16 +110,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8344749687658467804, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}
       propertyPath: m_Name
-      value: Smoke
+      value: Smoke Effect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}
---- !u!1001 &6636359106029503944
+--- !u!1001 &7069378014079674673
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1743415016057165532}
+    m_TransformParent: {fileID: 3957020275064760318}
     m_Modifications:
     - target: {fileID: 6499864992516460201, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}
       propertyPath: m_RootOrder
@@ -167,7 +167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8344749687658467804, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}
       propertyPath: m_Name
-      value: Smoke
+      value: Smoke Effect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}
@@ -228,32 +228,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89e56fc950485b74a8f8e313f2c8a7ff, type: 3}
---- !u!4 &349699207465806627 stripped
+--- !u!4 &1234488904169011182 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7645957767452660620, guid: 89e56fc950485b74a8f8e313f2c8a7ff, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9214451260726185793, guid: 89e56fc950485b74a8f8e313f2c8a7ff, type: 3}
   m_PrefabInstance: {fileID: 7980809032184871087}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1504202809877656477 stripped
+--- !u!4 &1392515545724016084 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8800464662177860402, guid: 89e56fc950485b74a8f8e313f2c8a7ff, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9048490336297250171, guid: 89e56fc950485b74a8f8e313f2c8a7ff, type: 3}
   m_PrefabInstance: {fileID: 7980809032184871087}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1743415016057165532 stripped
+--- !u!4 &3957020275064760318 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8570452618461113971, guid: 89e56fc950485b74a8f8e313f2c8a7ff, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6353364656376733521, guid: 89e56fc950485b74a8f8e313f2c8a7ff, type: 3}
   m_PrefabInstance: {fileID: 7980809032184871087}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &8411748558333775750 stripped
+--- !u!4 &9123166220460883044 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1908698553505036073, guid: 89e56fc950485b74a8f8e313f2c8a7ff, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1178387089724687563, guid: 89e56fc950485b74a8f8e313f2c8a7ff, type: 3}
   m_PrefabInstance: {fileID: 7980809032184871087}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &8995129978816661799
+--- !u!1001 &8863971967322855865
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1504202809877656477}
+    m_TransformParent: {fileID: 9123166220460883044}
     m_Modifications:
     - target: {fileID: 6499864992516460201, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}
       propertyPath: m_RootOrder
@@ -301,7 +301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8344749687658467804, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}
       propertyPath: m_Name
-      value: Smoke
+      value: Smoke Effect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1da1d73abceb9a44b01282011e65f87, type: 3}

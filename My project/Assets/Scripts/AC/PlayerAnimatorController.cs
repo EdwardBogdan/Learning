@@ -32,7 +32,6 @@ namespace MyProject.Physic.PAController
         {
             isArmed = _value;
             _controller.runtimeAnimatorController = _value ? _armedAnimator : _disarmedAnimator;
-            Data.GameSession.CurrentSession._isArmed = _value;
         }
         public override void ACTriggerAttack()
         {

@@ -127,5 +127,6 @@ PrefabInstance:
       propertyPath: _clips.Array.data[3].sprites.Array.data[3]
       value: 
       objectReference: {fileID: 21300000, guid: 478f8ef3d33bd41418d390bac2cc91fb, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3229367629884015470, guid: 29d1bfbc702754249868708b59b480b0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29d1bfbc702754249868708b59b480b0, type: 3}

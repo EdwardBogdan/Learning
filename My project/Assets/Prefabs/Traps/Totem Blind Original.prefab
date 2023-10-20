@@ -1,5 +1,85 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1192999692766555581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7233722366577594349}
+  - component: {fileID: 8961344868117454942}
+  - component: {fileID: 6608362584209681149}
+  m_Layer: 0
+  m_Name: 'CastNextTotem - B.CastAll(Totem) '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7233722366577594349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192999692766555581}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.082, y: -0.579, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8859109168935617648}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8961344868117454942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192999692766555581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055b4dbc6c6217f44a95e704452e8ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: CastNextTotem
+--- !u!114 &6608362584209681149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192999692766555581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f585cbfb06db5be4993782f48fd1cd2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _position: {x: 0, y: 0}
+  _color: 1
+  _layer:
+    serializedVersion: 2
+    m_Bits: 4194304
+  _action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3725639860555817480}
+        m_TargetAssemblyTypeName: MyProject.Characters.Totem.TotemBase, Assembly-CSharp
+        m_MethodName: OnCast
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _CheckSize: {x: 0.1, y: 0.1}
+  _nullAction: 0
 --- !u!1 &6037079953919856979
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +171,7 @@ GameObject:
   - component: {fileID: 8859109168935617651}
   - component: {fileID: 8859109168935617661}
   - component: {fileID: 8859109168935617660}
+  - component: {fileID: 3725639860555817480}
   m_Layer: 22
   m_Name: Totem Blind Original
   m_TagString: Untagged
@@ -111,6 +192,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6037079953919856977}
+  - {fileID: 7233722366577594349}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -335,17 +417,29 @@ MonoBehaviour:
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8859109168935617654}
-        m_TargetAssemblyTypeName: MyProject.Components.ScriptAnimations.ScriptSmartAnimator,
-          Assembly-CSharp
-        m_MethodName: SetClip
-        m_Mode: 5
+      - m_Target: {fileID: 3725639860555817480}
+        m_TargetAssemblyTypeName: MyProject.Characters.Totem.TotemBase, Assembly-CSharp
+        m_MethodName: AttackTrigger
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Attack Start
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6608362584209681149}
+        m_TargetAssemblyTypeName: MyProject.Components.Cast.BoxAllCastComponent,
+          Assembly-CSharp
+        m_MethodName: Cast
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &8859109168935617660
@@ -362,3 +456,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _binName: Traps
   _object: {fileID: 8859109168935617655}
+--- !u!114 &3725639860555817480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8859109168935617655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2e975aa2f2f7d49bf09adb290a70a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackClipName: Attack Start
+  _castNext: {fileID: 6608362584209681149}
+  _animator: {fileID: 8859109168935617654}
+  _delay:
+    _time: 1

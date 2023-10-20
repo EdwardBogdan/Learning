@@ -113,7 +113,7 @@ MonoBehaviour:
     _onComplete:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 5577105641970303048, guid: 7c23a798559c23d46a950fd5f83de347, type: 3}
+        - m_Target: {fileID: 5577105641970303048}
           m_TargetAssemblyTypeName: MyProject.Components.Shutdown.DestroyObjectComponent,
             Assembly-CSharp
           m_MethodName: DestroyObjects

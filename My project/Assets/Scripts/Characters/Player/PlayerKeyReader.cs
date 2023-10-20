@@ -45,6 +45,13 @@ namespace MyProject.Characters.Player
                 _actionSet.OnTriggerInteract();
             }
         }
+        public void OnKeyHeal(InputAction.CallbackContext context)
+        {
+            if (context.canceled)
+            {
+                _actionSet.OnUseHeal();
+            }
+        }
     }
 
 }

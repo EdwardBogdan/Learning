@@ -76,6 +76,86 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _radius: 0.03
   _color: 1
+--- !u!1 &3909959295427304019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3880626696527918067}
+  - component: {fileID: 2965819714955939557}
+  - component: {fileID: 5980428662604111785}
+  m_Layer: 0
+  m_Name: 'CastNextTotem - B.CastAll(Totem) '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3880626696527918067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3909959295427304019}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.596, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4191799998957260955}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2965819714955939557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3909959295427304019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055b4dbc6c6217f44a95e704452e8ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: CastNextTotem
+--- !u!114 &5980428662604111785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3909959295427304019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f585cbfb06db5be4993782f48fd1cd2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _position: {x: 0, y: 0}
+  _color: 1
+  _layer:
+    serializedVersion: 2
+    m_Bits: 4194304
+  _action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4355947793611359163}
+        m_TargetAssemblyTypeName: MyProject.Characters.Totem.TotemBase, Assembly-CSharp
+        m_MethodName: OnCast
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _CheckSize: {x: 0.1, y: 0.1}
+  _nullAction: 0
 --- !u!1 &4191799998957260956
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +171,7 @@ GameObject:
   - component: {fileID: 4191799998957260952}
   - component: {fileID: 4191799998957260950}
   - component: {fileID: 4191799998957260951}
+  - component: {fileID: 4355947793611359163}
   m_Layer: 22
   m_Name: Totem Boingo Original
   m_TagString: Untagged
@@ -111,6 +192,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1375188891040122298}
+  - {fileID: 3880626696527918067}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -348,6 +430,19 @@ MonoBehaviour:
           m_StringArgument: Attack Start
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5980428662604111785}
+        m_TargetAssemblyTypeName: MyProject.Components.Cast.BoxAllCastComponent,
+          Assembly-CSharp
+        m_MethodName: Cast
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4191799998957260951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,3 +457,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _binName: Traps
   _object: {fileID: 4191799998957260956}
+--- !u!114 &4355947793611359163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4191799998957260956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2e975aa2f2f7d49bf09adb290a70a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackClipName: Attack Start
+  _castNext: {fileID: 5980428662604111785}
+  _animator: {fileID: 4191799998957260957}
+  _delay:
+    _time: 1

@@ -10,16 +10,16 @@ GameObject:
   m_Component:
   - component: {fileID: 605547940298636117}
   - component: {fileID: -5978723153363554075}
-  - component: {fileID: -5830222922187441197}
-  - component: {fileID: 605547940298636114}
   - component: {fileID: 605547940298636115}
+  - component: {fileID: 605547940298636114}
   - component: {fileID: 605547940298636112}
   - component: {fileID: 605547940298636113}
   - component: {fileID: 605547940298636142}
   - component: {fileID: 605547940298636116}
   - component: {fileID: 7941322909096213737}
+  - component: {fileID: 8959402889642974062}
   m_Layer: 12
-  m_Name: Sword
+  m_Name: 'Sword - Item Ent.Trig. '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: Sword
---- !u!114 &-5830222922187441197
+--- !u!114 &605547940298636115
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,9 +62,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 605547940298636143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 006a9557cbdf71443927aa959050067f, type: 3}
+  m_Script: {fileID: 11500000, guid: 16d2e5bb4c4b29b43ac86714abfb69fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _id: Sword
+  _value: 1
 --- !u!114 &605547940298636114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,9 +90,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 605547940298636115}
-        m_TargetAssemblyTypeName: MyProject.Player.PlayerArming, Assembly-CSharp
-        m_MethodName: ArmPlayer
-        m_Mode: 0
+        m_TargetAssemblyTypeName: MyProject.Components.InventoryAddComponent, Assembly-CSharp
+        m_MethodName: TakeTreasure
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8959402889642974062}
+        m_TargetAssemblyTypeName: MyProject.Characters.Player.PlayerArming, Assembly-CSharp
+        m_MethodName: Arming
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -112,18 +126,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &605547940298636115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 605547940298636143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adc30c9fae0fd6e4c98aa065e8d6ed4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &605547940298636112
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -260,3 +262,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _binName: Loot
   _object: {fileID: 605547940298636143}
+--- !u!114 &8959402889642974062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605547940298636143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348226e921b14bb40b8abfd777a96eca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

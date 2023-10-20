@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 5349297781279769242}
   - component: {fileID: 5349297781279769241}
   - component: {fileID: 7040929578924134119}
-  - component: {fileID: 8547348026730463492}
-  - component: {fileID: 7614987782934048677}
+  - component: {fileID: 1171198214617727775}
   - component: {fileID: 5349297781279769244}
   - component: {fileID: 4769610827414241555}
   - component: {fileID: 5349297781279769240}
@@ -20,7 +19,7 @@ GameObject:
   - component: {fileID: 5349297781279769243}
   - component: {fileID: 5390170026011353718}
   m_Layer: 12
-  m_Name: Potion Heal
+  m_Name: 'Potion Heal - Item Ent.Trig. Spawn (Potion Partical) '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: Potion Heal
---- !u!114 &8547348026730463492
+--- !u!114 &1171198214617727775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,22 +114,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5349297781279769223}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 006a9557cbdf71443927aa959050067f, type: 3}
+  m_Script: {fileID: 11500000, guid: 16d2e5bb4c4b29b43ac86714abfb69fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7614987782934048677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5349297781279769223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e5b22bd04f62f144a7d7424eba5ca8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _value: 5
+  _id: Heal Potion
+  _value: 1
 --- !u!114 &5349297781279769244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,10 +141,10 @@ MonoBehaviour:
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7614987782934048677}
-        m_TargetAssemblyTypeName: MyProject.Components.HealMakerComponent, Assembly-CSharp
-        m_MethodName: MakeHeal
-        m_Mode: 0
+      - m_Target: {fileID: 1171198214617727775}
+        m_TargetAssemblyTypeName: MyProject.Components.InventoryAddComponent, Assembly-CSharp
+        m_MethodName: TakeTreasure
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

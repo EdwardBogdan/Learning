@@ -115,5 +115,14 @@ PrefabInstance:
       propertyPath: _clips.Array.data[3].sprites.Array.data[3]
       value: 
       objectReference: {fileID: 21300000, guid: b48a8fa0042028e428508ea8c4c324cb, type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 5980428662604111785, guid: f92afdba0d2d51d458e972b9429dd223, type: 3}
+      propertyPath: _position.x
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5980428662604111785, guid: f92afdba0d2d51d458e972b9429dd223, type: 3}
+      propertyPath: _position.y
+      value: -0.57
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4191799998957260950, guid: f92afdba0d2d51d458e972b9429dd223, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f92afdba0d2d51d458e972b9429dd223, type: 3}

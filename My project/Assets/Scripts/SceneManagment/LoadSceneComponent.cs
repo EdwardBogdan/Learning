@@ -1,3 +1,4 @@
+using MyProject.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +10,8 @@ namespace MyProject.Components
 
         public void LoadScene()
         {
+            GameSession.CurrentSession.SaveDataFromSession();
+
             SceneManager.LoadScene(_sceneName);
         }
     }

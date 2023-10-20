@@ -135,5 +135,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Totem Blind Second
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8859109168935617661, guid: 8b6026c433d73ae4da1fd63044947503, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8b6026c433d73ae4da1fd63044947503, type: 3}

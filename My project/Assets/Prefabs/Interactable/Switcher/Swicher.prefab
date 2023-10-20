@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edeb488fab718e74183b6188a2cc632b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canBeUsed: 1
   _action:
     m_PersistentCalls:
       m_Calls:
