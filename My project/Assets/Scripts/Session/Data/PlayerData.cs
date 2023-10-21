@@ -6,7 +6,7 @@ namespace MyProject.Data
     public class PlayerData
     {
         public int HP = 25;
-        public int MaxHP = 25;
+        public int MaxHP = 30;
         public bool IsArmed()
         {
             int count = GameSession.CurrentSession.Inventory.GetCount("Sword");
@@ -18,8 +18,8 @@ namespace MyProject.Data
         }
 
         public PlayerData()
-        { 
-        
+        {
+            
         }
 
         public PlayerData(PlayerData data)

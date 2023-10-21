@@ -256,7 +256,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4428951932404119852, guid: 335905f394bb0c74283bcc6a83e3b229, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4428951932404119852, guid: 335905f394bb0c74283bcc6a83e3b229, type: 3}
       propertyPath: m_LocalPosition.x
@@ -322,7 +322,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5395945616790553658, guid: 387b8896c4aa82c4e9dbf9c2a19df8a7, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5395945616790553658, guid: 387b8896c4aa82c4e9dbf9c2a19df8a7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -511,7 +511,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3887991070348385586, guid: 453922e048bf3204fad00726ee0db19b, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3887991070348385586, guid: 453922e048bf3204fad00726ee0db19b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -828,7 +828,7 @@ PrefabInstance:
       objectReference: {fileID: 1990766334}
     - target: {fileID: 6689913392084609635, guid: 5649bd376b3acb94e941180f83e08be3, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6689913392084609635, guid: 5649bd376b3acb94e941180f83e08be3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -953,7 +953,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1565411092}
   - component: {fileID: 1565411091}
-  - component: {fileID: 1565411090}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -961,14 +960,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1565411090
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565411089}
-  m_Enabled: 1
 --- !u!20 &1565411091
 Camera:
   m_ObjectHideFlags: 0

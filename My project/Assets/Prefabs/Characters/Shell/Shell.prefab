@@ -1134,6 +1134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _castAttack: {fileID: 4428951932101943457}
+  _speeker: {fileID: 0}
 --- !u!114 &4428951932404119867
 MonoBehaviour:
   m_ObjectHideFlags: 0
