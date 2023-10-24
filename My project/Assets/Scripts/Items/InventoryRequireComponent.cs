@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 namespace MyProject.Components
 {
-    public class InventoryRequireComponent : MonoBehaviour, INaming
+    public class InventoryRequireComponent : MonoBehaviour
     {
         [InventoryId][SerializeField] string _id;
         [SerializeField] int _value;
@@ -15,7 +15,6 @@ namespace MyProject.Components
         [SerializeField] private UnityEvent _onSucces;
         [SerializeField] private UnityEvent _onFail;
 
-        public string NameElement => "Item Require";
 
         public void CheckItem()
         {

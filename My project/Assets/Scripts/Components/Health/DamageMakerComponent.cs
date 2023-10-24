@@ -3,11 +3,10 @@ using UnityEngine;
 
 namespace MyProject.Components.Health
 {
-    public class DamageMakerComponent : MonoBehaviour, INaming
+    public class DamageMakerComponent : MonoBehaviour
     {
         [SerializeField] int _damage = 1;
         [SerializeField] float _hitVelocityMulti = 1;
-        public string NameElement => "Damage";
         public void DealDamage(GameObject _object)
         {
             if (!_object.TryGetComponent(out HealthComponent healthComponent)) return;

@@ -6,7 +6,6 @@ namespace MyProject.Components.Cast
     public class BoxCastComponent : CastComponent
     {
         [SerializeField] protected Vector2 _CheckSize;
-        public override string NameElement => $"B.Cast" + base.NameElement;
         public override void Cast()
         {
             Collider2D hit = Physics2D.OverlapBox(GetNewPos(), _CheckSize, 0f, _layer);

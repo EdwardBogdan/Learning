@@ -169,7 +169,7 @@ MonoBehaviour:
       - m_Target: {fileID: 177101870071141911}
         m_TargetAssemblyTypeName: MyProject.Components.TransparencyProcessor, Assembly-CSharp
         m_MethodName: StartProcess
-        m_Mode: 1
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -191,7 +191,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 3665889416921509382}
-  endValue: 0
   duration: 1
   _onFinish:
     m_PersistentCalls:

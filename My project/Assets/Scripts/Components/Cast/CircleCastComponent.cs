@@ -7,7 +7,6 @@ namespace MyProject.Components.Cast
     public class CircleCastComponent : CastComponent 
     {
         [SerializeField] protected float _radius;
-        public override string NameElement => $"C.Cast" + base.NameElement;
         public override void Cast()
         {
             Collider2D hit = Physics2D.OverlapCircle(GetNewPos(), _radius, _layer);

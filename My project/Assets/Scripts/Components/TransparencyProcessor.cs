@@ -7,25 +7,20 @@ namespace MyProject.Components
     public class TransparencyProcessor : MonoBehaviour
     {
         [SerializeField] private SpriteRenderer _renderer;
-        [SerializeField] private float endValue;
         [SerializeField] private float duration;
         [SerializeField] private UnityEvent _onFinish;
 
         private float currentTime = 0f;
 
-        public void StartProcess()
+        public void StartProcess(float value)
         {
-            StartCoroutine(Process());
+            StartCoroutine(Process(value));
         }
         public void SetTime(float value)
         {
             duration = value;
         }
-        public void SetEndValue(float value)
-        {
-            endValue = value;
-        }
-        private IEnumerator Process()
+        private IEnumerator Process(float value)
         {
             Color currentColor = _renderer.color;
 
@@ -37,7 +32,7 @@ namespace MyProject.Components
 
                 float t = currentTime / duration;
 
-                currentColor.a = Mathf.Lerp(startValue, endValue, t);
+                currentColor.a = Mathf.Lerp(startValue, value, t);
 
                 _renderer.color = currentColor;
 

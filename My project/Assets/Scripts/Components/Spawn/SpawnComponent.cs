@@ -3,14 +3,12 @@ using UnityEngine;
 
 namespace MyProject.Components.Spawn
 {
-    public class SpawnComponent : MonoBehaviour , INaming
+    public class SpawnComponent : MonoBehaviour
     {
         [SerializeField] bool _spawnInside = false;
         [SerializeField] Transform _target;
         [SerializeField] GameObject _prefab;
 
-        public string NameElement => $"Spawn ({PrefabName})";
-        private string PrefabName => _prefab ? _prefab.name : null;
         public GameObject SpawnObject()
         {
             GameObject prefab = Instantiate(_prefab, _target.position, Quaternion.identity);

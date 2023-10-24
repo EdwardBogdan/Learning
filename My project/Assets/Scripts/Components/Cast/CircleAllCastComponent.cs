@@ -5,7 +5,6 @@ namespace MyProject.Components.Cast
     public class CircleAllCastComponent : CircleCastComponent
     {
         [SerializeField] private bool _nullAction;
-        public override string NameElement => $"C.CastAll" + LayersName();
         public override void Cast()
         {
             Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, _radius, _layer);

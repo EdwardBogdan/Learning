@@ -5,7 +5,6 @@ namespace MyProject.Components.Cast
     public class BoxAllCastComponent : BoxCastComponent
     {
         [SerializeField] private bool _nullAction;
-        public override string NameElement => $"B.CastAll" + LayersName();
         public override void Cast()
         {
             Collider2D[] hits = Physics2D.OverlapBoxAll(GetNewPos(), _CheckSize, 0f, _layer);

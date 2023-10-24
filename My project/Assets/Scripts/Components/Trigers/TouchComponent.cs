@@ -3,11 +3,10 @@ using UnityEngine;
 
 namespace MyProject.Components.Triggers
 {
-    public class TouchComponent : MonoBehaviour, INaming
+    public class TouchComponent : MonoBehaviour
     {
         [SerializeField] bool _isTouched;
         [SerializeField] float _lastTouchTime;
-        public string NameElement => "Touching";
         public float LastTouchTime => _lastTouchTime;
         public bool IsTouched => _isTouched;
         public void Touch(GameObject hit)

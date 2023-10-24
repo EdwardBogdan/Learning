@@ -47,8 +47,4 @@ namespace MyProject.Utils
         Pink,
         Brown
     }
-    public interface INaming
-    {
-        public string NameElement { get; }
-    }
 }

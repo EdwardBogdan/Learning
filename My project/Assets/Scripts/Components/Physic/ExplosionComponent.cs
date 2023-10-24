@@ -3,11 +3,10 @@ using MyProject.Utils;
 
 namespace MyProject.Physic.Explosion
 {
-    public class ExplosionComponent : MonoBehaviour, INaming
+    public class ExplosionComponent : MonoBehaviour
     {
         [SerializeField] private float _explosiontForceMulti;
 
-        public string NameElement => "Explosion";
         public void Explode(GameObject _object)
         {
             Collider2D collider = _object.GetComponent<Collider2D>();

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace MyProject.Components.Triggers
 {
-    public class BaseTriggerComponent : MonoBehaviour, INaming
+    public class BaseTriggerComponent : MonoBehaviour
     {
         [SerializeField] protected bool _checkByTag;
         [SerializeField] protected string[] _tags;

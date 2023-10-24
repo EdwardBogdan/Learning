@@ -4,12 +4,10 @@ using MyProject.Utils;
 
 namespace MyProject.Components.ActionComponents
 {
-    public class RepeatActionComponent : MonoBehaviour , INaming
+    public class RepeatActionComponent : MonoBehaviour
     {
         [SerializeField] Cooldown _delay;
         [SerializeField] UnityEvent _action;
-
-        public string NameElement => "Repeat";
 
         private void Start()
         {

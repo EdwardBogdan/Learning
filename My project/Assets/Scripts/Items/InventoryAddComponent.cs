@@ -5,12 +5,11 @@ using MyProject.Data;
 
 namespace MyProject.Components
 {
-    public class InventoryAddComponent : MonoBehaviour, INaming
+    public class InventoryAddComponent : MonoBehaviour
     {
         [InventoryId][SerializeField] string _id;
         [SerializeField] int _value;
 
-        public string NameElement => "Item Add";
 
         public void TakeTreasure()
         {
