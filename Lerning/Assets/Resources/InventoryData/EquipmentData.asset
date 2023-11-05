@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46d67a5da22c4d4fb6e81da35bfed47, type: 3}
+  m_Name: EquipmentData
+  m_EditorClassIdentifier: 
+  _keySaved: saved
+  _keyMax: max
+  _items:
+  - _id: Sword
+    _currentValue:
+      _value: 0
+    _currentMaxValue:
+      _value: 27
+    _savedValue:
+      _value: 0
+    _savedMaxValue:
+      _value: 1
+    _icon: {fileID: 21300000, guid: 9125c204f566db048a92ebcb64d9d14a, type: 3}
+    _property: {fileID: 11400000, guid: 1527877ea9c21174fa0d8bb957b0ff24, type: 2}
+  - _id: Heal Potion
+    _currentValue:
+      _value: 0
+    _currentMaxValue:
+      _value: 4
+    _savedValue:
+      _value: 0
+    _savedMaxValue:
+      _value: 3
+    _icon: {fileID: 21300000, guid: f9161c6c9e06dc445ada3ee16d991f90, type: 3}
+    _property: {fileID: 11400000, guid: e1b770aaa119ab1478136f1720c3005a, type: 2}
+  - _id: Big Heal Potion
+    _currentValue:
+      _value: 0
+    _currentMaxValue:
+      _value: 9
+    _savedValue:
+      _value: 0
+    _savedMaxValue:
+      _value: 1
+    _icon: {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
+    _property: {fileID: 11400000, guid: 8389e482a0ea4044a89434d91f2aa217, type: 2}
+  - _id: Key
+    _currentValue:
+      _value: 0
+    _currentMaxValue:
+      _value: 1
+    _savedValue:
+      _value: 0
+    _savedMaxValue:
+      _value: 1
+    _icon: {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
+    _property: {fileID: 11400000, guid: 203c1bf0883d69e43a4ae03bad467b86, type: 2}

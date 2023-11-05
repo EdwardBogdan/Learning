@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6170f3f33fbf543a1be73423d7b7dd, type: 3}
+  m_Name: TreasureDefs
+  m_EditorClassIdentifier: 
+  _treasures:
+  - _id: Skull
+    _sprite: {fileID: 21300000, guid: af6511d78f4f2b1459b1f91a1456d2b7, type: 3}
+  - _id: Ruby
+    _sprite: {fileID: 21300000, guid: d96028a6522f8a94494a32d0ee524eb4, type: 3}
+  - _id: Emerald
+    _sprite: {fileID: 21300000, guid: b1ab972571c8387419725b70358af8b7, type: 3}
+  - _id: Sapphire
+    _sprite: {fileID: 21300000, guid: cc526d7cb1cb1c94188d91a80b195f95, type: 3}
+  - _id: Coin
+    _sprite: {fileID: 21300000, guid: 632ece01e173f524a80be9656551edc4, type: 3}

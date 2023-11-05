@@ -1,0 +1,206 @@
+{
+    "name": "Configuration",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "2a538e15-e869-48dc-ab0f-02fedce31a07",
+            "actions": [
+                {
+                    "name": "Movement",
+                    "type": "Value",
+                    "id": "80eeaf1d-33b3-44f8-91f2-dd14712601cd",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Choose Item",
+                    "type": "Button",
+                    "id": "d66f7d8f-cda0-406f-b4b4-1f4b77897d82",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Use Item",
+                    "type": "Button",
+                    "id": "a7b8b615-3f97-44cc-acd6-3bbb8564b62b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "4ea5475d-b5ef-4874-aac2-bfa5f0aae0e0",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "4f820910-94ad-4da3-8c5e-1c99c7dfd8c8",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "6dc1702c-d504-4fda-a5de-5bd302fd278f",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "86b09897-3b76-4bf1-a33a-fe8592112f38",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "6616dedc-ea45-465a-b030-d45dd6ad7851",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "01d84d9a-2f66-4173-b88f-f6b9942e761b",
+                    "path": "<Keyboard>/1",
+                    "interactions": "Press(pressPoint=1,behavior=1)",
+                    "processors": "Clamp(min=1,max=1)",
+                    "groups": "",
+                    "action": "Choose Item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "52d39f5a-fd4e-49b2-8983-40c6003027aa",
+                    "path": "<Keyboard>/2",
+                    "interactions": "Press(pressPoint=2,behavior=1)",
+                    "processors": "Clamp(min=2,max=2)",
+                    "groups": "",
+                    "action": "Choose Item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3b9f141f-2832-46f5-97d7-2ae34c6d825b",
+                    "path": "<Keyboard>/3",
+                    "interactions": "Press(pressPoint=3,behavior=1)",
+                    "processors": "Clamp(min=3,max=3)",
+                    "groups": "",
+                    "action": "Choose Item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d5093184-a7b3-4fbb-bdf1-f77af9d700a6",
+                    "path": "<Keyboard>/4",
+                    "interactions": "Press(pressPoint=4,behavior=1)",
+                    "processors": "Clamp(min=4,max=4)",
+                    "groups": "",
+                    "action": "Choose Item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7b136832-21d1-4ea7-92ff-f70f2baa3166",
+                    "path": "<Keyboard>/5",
+                    "interactions": "Press(pressPoint=5,behavior=1)",
+                    "processors": "Clamp(min=5,max=5)",
+                    "groups": "",
+                    "action": "Choose Item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a94d721b-1a6d-4e40-9dfd-46e7ab361930",
+                    "path": "<Keyboard>/6",
+                    "interactions": "Press(pressPoint=6,behavior=1)",
+                    "processors": "Clamp(min=6,max=6)",
+                    "groups": "",
+                    "action": "Choose Item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4eef7fa3-fcfe-4b48-8776-6cd3d2071a38",
+                    "path": "<Keyboard>/7",
+                    "interactions": "Press(pressPoint=7,behavior=1)",
+                    "processors": "Clamp(min=7,max=7)",
+                    "groups": "",
+                    "action": "Choose Item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "daf126d2-d154-46f3-b300-3f99f205ab4c",
+                    "path": "<Keyboard>/8",
+                    "interactions": "Press(pressPoint=8,behavior=1)",
+                    "processors": "Clamp(min=8,max=8)",
+                    "groups": "",
+                    "action": "Choose Item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d5295e8f-853a-4567-b7fb-0d8f5bd48382",
+                    "path": "<Keyboard>/9",
+                    "interactions": "Press(pressPoint=9,behavior=1)",
+                    "processors": "Clamp(min=9,max=9)",
+                    "groups": "",
+                    "action": "Choose Item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0a0d86b9-826d-43d0-88f2-cd505045f1bf",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Use Item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
