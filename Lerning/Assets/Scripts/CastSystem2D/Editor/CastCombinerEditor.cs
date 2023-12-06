@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CastSystem2D.Editors
 {
-    [CustomEditor(typeof(CastCombinerComponent))]
+    [CustomEditor(typeof(CastCombiner))]
     public class CastCombinerEditor : Editor
     {
         public Texture2D icon;
@@ -19,7 +19,7 @@ namespace CastSystem2D.Editors
             _onlyFirstCollected = serializedObject.FindProperty("_onlyFirstCollected");
             _action = serializedObject.FindProperty("_action");
 
-            CastCombinerComponent component = (CastCombinerComponent)target;
+            CastCombiner component = (CastCombiner)target;
 
             if (icon != null)
             {

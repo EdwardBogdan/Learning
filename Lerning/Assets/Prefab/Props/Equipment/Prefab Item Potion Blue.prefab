@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5953010923504700169
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3627725617943746230, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_Name
+      value: Prefab Item Potion Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746231, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: _sprites.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746231, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: _sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0ecc555cae90d784e930e0ea9755c361, type: 3}
+    - target: {fileID: 3627725617943746231, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: _sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c4f7cb9d9902d7488784a0674e24497, type: 3}
+    - target: {fileID: 3627725617943746231, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: _sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 76b3f805ada393644ae031355a28c531, type: 3}
+    - target: {fileID: 3627725617943746231, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: _sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 67e7abc94dc095a4db89b570c7579834, type: 3}
+    - target: {fileID: 3627725617943746231, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: _sprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 23f61d9ec2b1cc44e91c7ff4e8ae71f3, type: 3}
+    - target: {fileID: 3627725617943746231, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: _sprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 03f7798a496e43a4b9f91ad2f3dec7dd, type: 3}
+    - target: {fileID: 3627725617943746231, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: _sprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2e29e1eca497cfa418f707a46b6fa69e, type: 3}
+    - target: {fileID: 3627725617943746232, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 76b3f805ada393644ae031355a28c531, type: 3}
+    - target: {fileID: 3627725617943746233, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746233, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746233, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746233, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746233, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746233, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746233, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746233, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746233, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746233, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746233, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746234, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: _checkByTag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746234, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: _ignoreByTag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746237, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: _itemId
+      value: Heal Potion
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746238, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746238, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746238, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746238, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746238, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.40625
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627725617943746238, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.53125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876421859378566251, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: _prefab
+      value: 
+      objectReference: {fileID: 90599291696996107, guid: 019939359ea1bf54daeb80fe9bce5873, type: 3}
+    - target: {fileID: 9212702768272248902, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: _icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c4f7cb9d9902d7488784a0674e24497, type: 3}
+    - target: {fileID: 9212702768272248902, guid: aa508bf695fc12f4199528fc557458cd, type: 3}
+      propertyPath: _item
+      value: Heal Potion
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa508bf695fc12f4199528fc557458cd, type: 3}

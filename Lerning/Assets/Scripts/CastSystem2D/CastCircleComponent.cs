@@ -19,7 +19,8 @@ namespace CastSystem2D.Components
         protected override void OnDrawGizmosSelected()
         {
             Handles.color = _color;
-            Handles.DrawSolidDisc(GetNewPos(), Vector3.forward, _checkRadius);
+            Vector2 pos = GetNewPos();
+            Handles.DrawSolidDisc(pos, Vector3.forward, _checkRadius);
         }
 #endif
     }

@@ -14,3 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _equipmentId: Sword
   _removeFromUse: 1
+  _keyArmed: Armed
+  _keyDisarmed: Disarmed
+  _keyAttackEvent: ATrigger Attack
+  _keyThrowEvent: ATrigger Throw
+  cdThrow:
+    _time: 0.2
+  cdAttack:
+    _time: 0.2

@@ -1,4 +1,5 @@
 using Core;
+using Inventory;
 using System.Collections;
 using UnityEngine;
 
@@ -13,8 +14,6 @@ namespace SoundsAndUI.UIElements
         [SerializeField] private RectTransform _border;
         [SerializeField] private Transform _container;
         [SerializeField] private TreasureWidget _prefab;
-
-        
 
         private static readonly int Show = Animator.StringToHash("Show");
 
@@ -43,7 +42,7 @@ namespace SoundsAndUI.UIElements
         {
             Hud = this;
             
-            var items = PlayerCore.PlayerTreasuryData;
+            var items = TreasureData.I.Treasures;
 
             foreach (var item in items)
             {
@@ -57,11 +56,13 @@ namespace SoundsAndUI.UIElements
         [ContextMenu("Rebuild Border")]
         internal void RebuildBorder()
         {
-            float height = SystemCore.HudSettings.TreasureBorder.HeightBorder;
+            Core.Settings.HudSettings.ItemBorderData border = SystemCore.HudSettings.TreasureBorder;
 
-            height += SystemCore.HudSettings.TreasureBorder.InsideSpace * PlayerCore.PlayerTreasuryData.Length;
+            float height = border.HeightBorder;
 
-            _border.sizeDelta = new(SystemCore.HudSettings.TreasureBorder.WidhtBorder, height);
+            height += border.InsideSpace * TreasureData.I.Treasures.Length;
+
+            _border.sizeDelta = new(border.WidhtBorder, height);
         }
         internal void CheckShow(int newValue, int oldValue)
         {

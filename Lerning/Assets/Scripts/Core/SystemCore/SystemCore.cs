@@ -7,6 +7,7 @@ namespace Core
     {
         [SerializeField] private AudioSource _sfxSource;
         [SerializeField] private AudioSource _musicSource;
+        [SerializeField] private DialogUIManager _dialogPrefab;
 
         [SerializeField] private Canvas _overlayCanvas;
 
@@ -17,6 +18,7 @@ namespace Core
         public static Canvas OverlayCanvas => I._overlayCanvas;
         public static SoundSettings SoundSettings => SoundSettings.I;
         public static HudSettings HudSettings => HudSettings.I;
+        public static DialogUIManager DialogPrefab => I._dialogPrefab;
         private static SystemCore I => _currentCore;
 
 
@@ -44,6 +46,7 @@ namespace Core
             }
             return true;
         }
+
     }
 
     public enum SoundSettingsMode

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _active: 1
   _acceleration: 20
-  _moveClamp: 10
   _deAcceleration: 30
+  _speedClamp: 10

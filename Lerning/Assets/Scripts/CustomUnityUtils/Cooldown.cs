@@ -20,5 +20,9 @@ namespace CustomUnityUtils.TimeUtils
         {
             _timesUp = Time.time + _time;
         }
+        public void Ready()
+        {
+            _timesUp = Time.time;
+        }
     }
 }

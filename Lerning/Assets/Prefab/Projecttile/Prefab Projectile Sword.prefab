@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7465311265858275334
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -6960377791722556112, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6ced527a5345364d9e9e86c19415971, type: 3}
+    - target: {fileID: 2493932327868355487, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493932327868355487, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984117739791396437, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984117739791396437, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984117739791396437, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984117739791396437, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984117739791396437, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984117739791396437, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984117739791396437, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984117739791396437, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984117739791396437, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984117739791396437, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984117739791396437, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6752049622595199756, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: m_Name
+      value: Prefab Projectile Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949951339731901572, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+      propertyPath: _prefab
+      value: 
+      objectReference: {fileID: 5931766044269811783, guid: 22b9a569b09a41c45a387e9c613f04f4, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+--- !u!1 &4192293047048645386 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6752049622595199756, guid: 64978907e1b27db4e9541b8065a98e31, type: 3}
+  m_PrefabInstance: {fileID: 7465311265858275334}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8595132342497370910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4192293047048645386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535265a9c7625e246aa094b973c75248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playing: 1
+  _frameRate: 10
+  _loop: 1
+  _sprites:
+  - {fileID: 21300000, guid: e6ced527a5345364d9e9e86c19415971, type: 3}
+  - {fileID: 21300000, guid: 079d52ed3a8bb8644a5b2357341aa152, type: 3}
+  - {fileID: 21300000, guid: 1cb92adf7542c124f950b26fe00fd584, type: 3}
+  - {fileID: 21300000, guid: f7e80f832424ece43871703107740f30, type: 3}
+  _onComplete:
+    m_PersistentCalls:
+      m_Calls: []

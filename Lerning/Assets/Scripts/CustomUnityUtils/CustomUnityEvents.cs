@@ -15,4 +15,9 @@ namespace CustomUnityUtils.UnityEvents
     {
 
     }
+    [Serializable]
+    public class UnityEvent_String : UnityEvent<string>
+    {
+
+    }
 }

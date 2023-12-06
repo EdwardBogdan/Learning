@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PlayerCurrentCharacterictics
   m_EditorClassIdentifier: 
   _minOfMaxHealth: 30
-  _maxOfMaxHealth: 90
+  _maxOfMaxHealth: 150
   _health:
-    _value: 9
+    _value: 150
   _maxHealth:
-    _value: 89
+    _value: 150

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b695cfd11dde6c84e935f63a6ef49466, type: 3}
+  m_Name: Shell - Separating Fork 0
+  m_EditorClassIdentifier: 
+  stateName: Separating Fork
+  _moveToTarget: 1
+  _checkInterval: 0.1
+  _chaseAreaName: Vision Area
+  _physicControllerName: Physic
+  _targetLost: {fileID: 11400000, guid: e2f89f8cb7cbb6b4baeb3379daa3f620, type: 2}
+  forkExits:
+  - areaName: Attack Area
+    state: {fileID: 11400000, guid: cddcc96d13405ee4e8a080d12925abdd, type: 2}
+    area: {fileID: 0}
+  - areaName: Throw Area
+    state: {fileID: 11400000, guid: a98e9599ea445ca4fa743d9d81ed9625, type: 2}
+    area: {fileID: 0}

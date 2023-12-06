@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e72b38d7ec3e4fa4bb452059b1f52cde, type: 3}
+  m_Name: eng
+  m_EditorClassIdentifier: 
+  _base:
+  - _group: 0
+    _url: https://docs.google.com/spreadsheets/d/e/2PACX-1vRPNcqkLX618qFccq8Yw51uKx0iPStJMCMb97zdep6_IkC_zkttCyGBPVqbmmwrnvddr7ooHSJpmH2Y/pub?gid=0&single=true&output=tsv
+    locale:
+    - Key: button_exit
+      Value: "exit\r"
+    - Key: button_ok
+      Value: "ok\r"
+    - Key: button_start
+      Value: "start\r"
+    - Key: button_continue
+      Value: "countinue\r"
+    - Key: button_language
+      Value: "language\r"
+    - Key: button_newgame
+      Value: "new game\r"
+    - Key: button_chooselevel
+      Value: "choose level\r"
+    - Key: button_options
+      Value: options
+  - _group: 1
+    _url: https://docs.google.com/spreadsheets/d/e/2PACX-1vSouhhATdh4qnaJ0A4sXNAigQvMo1fdF5S42uARml8K2MGJXx3cH4OMvakvvhkZ5PGwM4Gg3S0Yq3_W/pub?gid=0&single=true&output=tsv
+    locale:
+    - Key: title_main
+      Value: "main menu\r"
+    - Key: title_options
+      Value: "options\r"
+    - Key: title_language
+      Value: "language\r"
+    - Key: title_music
+      Value: "music\r"
+    - Key: title_sfx
+      Value: sfx
+  - _group: 2
+    _url: https://docs.google.com/spreadsheets/d/e/2PACX-1vTP7WP0WYZrCdfkV1mwtSEVdsY3UD2TcKn02SXX2ApAYEkEwlPAAvJHOW0Au6MP1UBdkO5IcwMosFYd/pub?gid=0&single=true&output=tsv
+    locale:
+    - Key: dialog_test1
+      Value: "Ouch\r"
+    - Key: dialog_test2
+      Value: "Hi, i am Barrel\r"
+    - Key: dialog_test3
+      Value: "Sorry...\r"
+    - Key: dialog_here_need_key
+      Value: "\"Here need a key...\"\r"
+    - Key: dialog_tutorial_1.1
+      Value: "Hi, i am Barrel, your best friend!\r"
+    - Key: dialog_tutorial_1.2
+      Value: "To go further, find the switch.\r"
+    - Key: dialog_tutorial_1.3
+      Value: "And sorry for that...\r"
+    - Key: dialog_tutorial_2.1
+      Value: "Again you?\r"
+    - Key: dialog_tutorial_2.2
+      Value: "I thought you didn't survive the fall...\r"
+    - Key: dialog_tutorial_2.3
+      Value: "Doesn't matter. I'm always ready to help a friend like you\r"
+    - Key: dialog_tutorial_2.4
+      Value: "The exit is at the top, but you won't get there without my help.\r"
+    - Key: dialog_tutorial_2.5
+      Value: "So you'll owe...\r"
+    - Key: dialog_player_1.1
+      Value: .....!?

@@ -16,11 +16,9 @@ namespace PhysicModuleSystem
         private int _currentCoreIndex;
         private int _currentModuleIndex;
 
-        private delegate void OnDrawDelegate();
+        private Action OnDraw;
 
-        private OnDrawDelegate OnDraw;
-
-        private PhysicModuleController Controller;
+        private PhysicModuleController _controller;
 
         private MonoScript[] _availableModules;
 
@@ -34,7 +32,7 @@ namespace PhysicModuleSystem
 
         private static string[] _moduleNames;
 
-        private PhysicModuleLogicCore CurrentCore => Controller.Core;
+        private PhysicModuleLogicCore CurrentCore => _controller.Core;
 
         public override void OnInspectorGUI()
         {
@@ -71,7 +69,7 @@ namespace PhysicModuleSystem
                 AssetDatabase.SaveAssets();
 
                 core = Resources.Load<PhysicModuleLogicCore>(_pathCore + "/" + _coreName);
-                Controller.Core = core;
+                _controller.Core = core;
 
                 StartDrawCore();
             }
@@ -88,9 +86,9 @@ namespace PhysicModuleSystem
             {
                 var Core = _logicMas[_currentCoreIndex];
 
-                Controller.Core = Core;
+                _controller.Core = Core;
 
-                EditorUtility.SetDirty(Controller);
+                EditorUtility.SetDirty(_controller);
 
                 StartDrawCore();
             }
@@ -104,8 +102,8 @@ namespace PhysicModuleSystem
 
             if (GUILayout.Button("Change Core"))
             {
-                Controller.Core = null;
-                EditorUtility.SetDirty(Controller);
+                _controller.Core = null;
+                EditorUtility.SetDirty(_controller);
                 StartDrawChoose();
                 return;
             }
@@ -214,7 +212,7 @@ namespace PhysicModuleSystem
 
             AssetDatabase.CreateAsset(module, fullPath);
             
-            CurrentCore.SetModule(module);
+            CurrentCore.AddModule(module);
 
             EditorUtility.SetDirty(CurrentCore);
 
@@ -252,7 +250,7 @@ namespace PhysicModuleSystem
 
         private void OnEnable()
         {
-            Controller = (PhysicModuleController)target;
+            _controller = (PhysicModuleController)target;
 
             string resourcesFolder = Application.dataPath + "/Resources";
 

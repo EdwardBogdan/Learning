@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e251c30d69f6a7d4fa3092263137de2b, type: 3}
+  m_Name: Sharky - Target Detected 0
+  m_EditorClassIdentifier: 
+  stateName: Target Detected
+  _dialogKey: Dialog 1
+  _physicControllerName: Physic Controller
+  _spawnManagerName: Spawn Manager
+  _delay: 0.5
+  _targetStillDetected: {fileID: 11400000, guid: 06e454dc355fc4245a689b2d61949354, type: 2}
+  _targetLost: {fileID: 11400000, guid: 4fe2cbddce4d57244ad9fba250f7d4fa, type: 2}

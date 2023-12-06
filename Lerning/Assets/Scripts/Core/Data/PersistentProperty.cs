@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 
 namespace Core.Data.PersistentProperty
 {
-    public abstract class PersistentProperty<TPropertyType>
+    public abstract class PersistentProperty<TPropertyType> : IDisposable
     {
         [SerializeField] private TPropertyType _value;
 
@@ -35,7 +36,7 @@ namespace Core.Data.PersistentProperty
             }
         }
 
-        protected void Init()
+        public void Init()
         {
             _stored = _value = Read(_defaultValue);
         }
@@ -48,13 +49,9 @@ namespace Core.Data.PersistentProperty
             Value = _value;
         }
 
-        public void Subscribe(OnPropertyChanged call)
+        public void Dispose()
         {
-            OnChanged += call;
-        }
-        public void Unsubscribe(OnPropertyChanged call)
-        {
-            OnChanged -= call;
+            OnChanged = null;
         }
     }
 }

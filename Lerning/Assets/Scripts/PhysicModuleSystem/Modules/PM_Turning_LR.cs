@@ -26,6 +26,10 @@ namespace PhysicModuleSystem
         {
             _controller = controller;
             _scale = controller.RigidBody.transform.localScale;
+
+            if (_scale.x < 0) _scale.x *= -1;
+            if (_scale.y < 0) _scale.y *= -1;
+            if (_scale.z < 0) _scale.z *= -1;
         }
     }
 }

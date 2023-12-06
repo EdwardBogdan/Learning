@@ -1,5 +1,5 @@
 using Core;
-using Core.Inventory;
+using Inventory;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;

@@ -11,5 +11,10 @@ namespace SoundsAndUI.UIElements
         {
             _bar.fillAmount = progress;
         }
+
+        public void SerColor(Color color)
+        {
+            _bar.color = color;
+        }
     }
 }

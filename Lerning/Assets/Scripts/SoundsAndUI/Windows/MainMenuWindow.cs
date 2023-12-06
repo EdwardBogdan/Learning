@@ -12,7 +12,7 @@ namespace SoundsAndUI.Windows
         {
             _closeAction = () => 
             { 
-                SceneManager.LoadScene("Level 1 Main");
+                //CustomSceneManager.LoadScene("Test");
                 Instantiate(_hud, CanvasTransform);
             };
             TriggerClose();

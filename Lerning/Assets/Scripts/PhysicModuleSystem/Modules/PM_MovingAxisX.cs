@@ -5,8 +5,8 @@ namespace PhysicModuleSystem
     internal class PM_MovingAxisX : PhysicModule
     {
         [SerializeField] private float _acceleration;
-        [SerializeField] private float _moveClamp;
         [SerializeField] private float _deAcceleration;
+        [SerializeField] private float _speedClamp;
 
 
         private PhysicModuleController _controller;
@@ -30,7 +30,6 @@ namespace PhysicModuleSystem
             if (inputX != 0)
             {
                 currentHorizontalSpeed += inputX * _acceleration * Time.deltaTime;
-                currentHorizontalSpeed = Mathf.Clamp(currentHorizontalSpeed, -_moveClamp, _moveClamp);
             }
             else
             {
@@ -38,6 +37,7 @@ namespace PhysicModuleSystem
                 currentHorizontalSpeed = Mathf.MoveTowards(currentHorizontalSpeed, 0, _deAcceleration * Time.deltaTime);
             }
 
+            currentHorizontalSpeed = Mathf.Clamp(currentHorizontalSpeed, -_speedClamp, _speedClamp);
             _controller.RigidBody.velocity = new(currentHorizontalSpeed, Velocity.y);
         }
     }

@@ -9,6 +9,7 @@ namespace PhysicModuleSystem
     {
         [SerializeField] private string _groundId;
         [SerializeField] private float _jumpHeight;
+        [SerializeField] private float _doubleJumpHeight;
         [SerializeField][Range(0, 5)] int _countDoubleJumpMax;
         [SerializeField] private float _coyoteTime;
         [SerializeField] private float _fallMultiplier;
@@ -58,7 +59,7 @@ namespace PhysicModuleSystem
                 }
                 else if (_countDoubleJump > 0)
                 {
-                    velocityY = _jumpHeight;
+                    velocityY = _doubleJumpHeight;
 
                     SetJump(velocityY);
 

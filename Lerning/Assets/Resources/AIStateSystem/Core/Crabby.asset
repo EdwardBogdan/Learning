@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51e6f7e13467c1d48afafb0c11f7a394, type: 3}
+  m_Name: Crabby
+  m_EditorClassIdentifier: 
+  list:
+  - _state: {fileID: 11400000, guid: 212e5b4ce26a5964abbfcf2309205a61, type: 2}
+  - _state: {fileID: 11400000, guid: b88c6ab27192ae641999fbc7abe03eb0, type: 2}
+  - _state: {fileID: 11400000, guid: c8e75c1750a1eb24e88af8f2b074b29c, type: 2}
+  - _state: {fileID: 11400000, guid: c7bcdcdab25e3b246bdca374774de157, type: 2}
+  - _state: {fileID: 11400000, guid: 7e1c097564771134b880f983562b6f6e, type: 2}

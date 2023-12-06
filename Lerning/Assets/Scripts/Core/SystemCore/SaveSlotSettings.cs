@@ -1,3 +1,4 @@
+using Core.Data.PersistentProperty;
 using UnityEngine;
 
 namespace Core.Settings
@@ -5,17 +6,24 @@ namespace Core.Settings
     [CreateAssetMenu(menuName = "Data/Settings/Save Slot Settings", fileName = "SaveSlotSettings")]
     public class SaveSlotSettings : ScriptableObject
     {
-        public int _slot = 0;
-        public int Slot => _slot;
+        [SerializeField] private IntPersistentProperty _slot;
+        [SerializeField][Range(1,3)]private int _slotCount;
+        public static int SlotID => I._slot.Value;
 
         private static SaveSlotSettings _instance;
         internal static SaveSlotSettings I => _instance == null ? LoadSingleton() : _instance;
 
-        public void ChangeSlot(int slot)
+        public static void ChangeSlot(int slot)
         {
-            _slot = slot;
+            slot = Mathf.Clamp(slot, 1, I._slotCount);
+            I._slot.Value = slot;
         }
 
+        private void OnValidate()
+        {
+            _slot.Validate();
+            ChangeSlot(_slot.Value);
+        }
         private static SaveSlotSettings LoadSingleton()
         {
             return _instance = Resources.Load<SaveSlotSettings>("Settings/SaveSlotSettings");

@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffefc672ca7c4fa4796bd9e58a0698be, type: 3}
   m_Name: SaveSlotSettings
   m_EditorClassIdentifier: 
-  _slot: 0
+  _slot:
+    _value: 1
+  _slotCount: 3

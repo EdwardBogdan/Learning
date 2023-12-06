@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Platform
+  - Barrel
+  - Lock
+  - Interactable
   layers:
   - Default
   - TransparentFX
@@ -12,8 +16,17 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Background
   - Ground
+  - Trash
+  - 
+  - Player
+  - 
+  - Enemy
+  - Container
+  - 
+  - 
+  - Interactable
   - 
   - 
   - 
@@ -28,17 +41,26 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - IgnoreLayer
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2121572319
+    locked: 0
+  - name: Trash
+    uniqueID: 400728873
+    locked: 0
+  - name: Partical Under
+    uniqueID: 2480459263
+    locked: 0
+  - name: Creatures
+    uniqueID: 2702990197
+    locked: 0
+  - name: Ground
+    uniqueID: 1334718411
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Partical Over
+    uniqueID: 966765789
     locked: 0

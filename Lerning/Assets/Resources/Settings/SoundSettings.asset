@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SoundSettings
   m_EditorClassIdentifier: 
   music:
-    _value: 0
+    _value: 0.46
   sfx:
-    _value: 0
+    _value: 0.37

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Core.Data.ObservableProperty
@@ -33,6 +34,11 @@ namespace Core.Data.ObservableProperty
         public void Validate()
         {
             Value = _value;
+        }
+
+        public Delegate[] GetEvents()
+        {
+            return OnChanged.GetInvocationList();
         }
     }
 }

@@ -10,7 +10,7 @@ namespace CastSystem2D.Components
 
         public override List<Collider2D> Collect()
         {
-            Collider2D[] hits = Physics2D.OverlapBoxAll(GetNewPos(), _checkArea, 0f, _rotationAngle, _layer);
+            Collider2D[] hits = Physics2D.OverlapBoxAll(GetNewPos(), _checkArea, _rotationAngle, _layer);
 
             return SortToList(hits);
         }

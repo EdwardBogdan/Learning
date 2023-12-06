@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3644765684479985144
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1004481780305698658, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: _prefab
+      value: 
+      objectReference: {fileID: 90599291696996107, guid: ae6af7404914a4b4a8f91d5febebc62a, type: 3}
+    - target: {fileID: 6973000344349154736, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973000344349154736, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973000344349154736, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973000344349154736, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973000344349154736, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973000344349154736, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973000344349154736, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973000344349154736, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973000344349154736, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973000344349154736, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973000344349154736, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973000344349154740, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: _onSuccesfull.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973000344349154750, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: _loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973000344349154750, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: _playing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973000344349154750, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: _sprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973000344349154750, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: _sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 65b7e1dbec7c7234eb15a41bd6239d8a, type: 3}
+    - target: {fileID: 6973000344349154750, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: _sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 409937f5d399eb34ca7d549ed63eb0b6, type: 3}
+    - target: {fileID: 6973000344349154750, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: _sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 51c95a8b50748d14da0a95e5904d0fbe, type: 3}
+    - target: {fileID: 6973000344349154750, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: _sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 50c2fb5e4515a80409d58d02094ef3c6, type: 3}
+    - target: {fileID: 6973000344349154750, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: _sprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 09fb91f28b165544a809405ff14e46f7, type: 3}
+    - target: {fileID: 6973000344349154751, guid: aa2094f42123a21428e64d408731a23b, type: 3}
+      propertyPath: m_Name
+      value: Prefab Item Sword Emdedded
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa2094f42123a21428e64d408731a23b, type: 3}

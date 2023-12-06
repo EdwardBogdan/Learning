@@ -11,7 +11,7 @@ namespace PhysicModuleSystem
 
 #if UNITY_EDITOR
         public List<ModuleData> List => list;
-        public void SetModule(PhysicModule module)
+        public void AddModule(PhysicModule module)
         {
             ModuleData data = new(module);
 

@@ -26,7 +26,6 @@ namespace PhysicModuleSystem
             if (_ground.IsTouched) return;
 
             float InputX = _controller.Direction.x;
-            
 
             if (InputX != 0)
             {

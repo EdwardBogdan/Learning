@@ -30,7 +30,7 @@ namespace CastSystem2D.Components
         {
             Vector3 currentPos = transform.position;
             Vector3 scale = transform.lossyScale;
-            return new((currentPos.x + _position.x) * scale.x, (currentPos.y + _position.y) * scale.y, 0f);
+            return new(currentPos.x + (_position.x * scale.x), currentPos.y + (_position.y * scale.y), 0f);
         }
         protected List<Collider2D> SortToList(Collider2D[] mas)
         {

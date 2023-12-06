@@ -33,18 +33,17 @@ namespace PhysicModuleSystem
 
         private ModuleRef[] _currentModules;
 
-
         public void SetDirection(Vector2 direction)
         {
             _direction = direction;
         }
-        internal PhysicModule GetModule(Type type)
+        internal T GetModule<T>() where T : PhysicModule
         {
             foreach (ModuleRef mod in _currentModules)
             {
-                if (mod.type == type)
+                if (mod.type is T)
                 {
-                    return mod.module;
+                    return (T)mod.module;
                 }
             }
             return null;

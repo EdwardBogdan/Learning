@@ -15,17 +15,17 @@ MonoBehaviour:
   _items:
   - _id: Sword
     _maxValue: 1
-    _sprite: {fileID: 21300000, guid: 9125c204f566db048a92ebcb64d9d14a, type: 3}
+    _sprite: {fileID: 21300000, guid: 09fb91f28b165544a809405ff14e46f7, type: 3}
     _property: {fileID: 11400000, guid: 1527877ea9c21174fa0d8bb957b0ff24, type: 2}
   - _id: Heal Potion
     _maxValue: 3
-    _sprite: {fileID: 21300000, guid: f9161c6c9e06dc445ada3ee16d991f90, type: 3}
-    _property: {fileID: 11400000, guid: e1b770aaa119ab1478136f1720c3005a, type: 2}
+    _sprite: {fileID: 21300000, guid: 8c4f7cb9d9902d7488784a0674e24497, type: 3}
+    _property: {fileID: 11400000, guid: 64080663177d97f4cb26882db1d28432, type: 2}
   - _id: Big Heal Potion
     _maxValue: 1
-    _sprite: {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
-    _property: {fileID: 11400000, guid: 8389e482a0ea4044a89434d91f2aa217, type: 2}
+    _sprite: {fileID: 21300000, guid: 14e24e773a7c9374eb46986da31a7321, type: 3}
+    _property: {fileID: 11400000, guid: 4e68341de51f509408b21dc56030b8ca, type: 2}
   - _id: Key
     _maxValue: 1
-    _sprite: {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
-    _property: {fileID: 11400000, guid: 203c1bf0883d69e43a4ae03bad467b86, type: 2}
+    _sprite: {fileID: 21300000, guid: eb29a452fc0db9744bcc514b311e08b5, type: 3}
+    _property: {fileID: 11400000, guid: 4068eee8a4b4c2e46898d8359c488225, type: 2}
